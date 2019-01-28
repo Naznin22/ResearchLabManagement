@@ -14,7 +14,7 @@ class AddFileToApplications extends Migration
     public function up()
     {
         Schema::table('applications', function (Blueprint $table) {
-            $table->string('file')->after('body');
+            //$table->string('file')->after('body');
         });
     }
 
@@ -26,7 +26,7 @@ class AddFileToApplications extends Migration
     public function down()
     {
         Schema::table('applications', function (Blueprint $table) {
-            $table->dropColumn('file');
+            //$table->dropColumn('file');
         });
     }
 }
