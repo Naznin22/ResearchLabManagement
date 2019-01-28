@@ -1,0 +1,108 @@
+html,body{
+	height: 100%;
+	width: 100%
+}
+
+/* .form-style button {
+	background-color:orangered;
+} */
+.navbar{
+	background-color: #23415C;
+	padding: 1% 0;
+	font-size: 1.2em;	
+}
+
+.navbar_brand{
+	min-height: 55px;
+	padding: 0 15px 5px;
+}
+
+.navbar-default .navbar-nav li a{
+	color: #D5D5D5;
+}
+.navbar-default .navbar-nav li a:hover,.navbar-default .navbar-nav li a.active{
+	color: #FFF;
+}
+
+#home{
+	background:url(images/grey.png) no-repeat center center fixed;
+	display: table;
+	height: 100%;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+}
+.landing-text{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.landing-text h1{
+	font-size: 500%;
+	font-weight: 700;
+}
+.padding{
+	padding: 80px 0;
+}
+.padding img{
+	width: 100%;
+}
+
+#fixed{
+	background: url(images/grey.png) no-repeat center center fixed;
+	display: table;
+	height:60%;
+	width: 100%;
+	position: relative;
+	background-size:cover; 
+}
+
+footer{
+	width: 100%;
+	background-color:#23415C;
+	/* padding: 5% 5% 10% 5%; */
+	padding: 1% 0;
+	color: #FFF;
+}
+
+.fa{
+	padding: 15px;
+	font-size: 25px;
+	color: #FFF;
+}
+.fa:hover{
+	color: #D5D5D5;
+	text-decoration: none;
+}
+
+@media (max-width: 768px){
+	.landing-text h1{
+		font-size: 300%;
+	}
+	.fa{
+		font-size: 15px;
+		padding: 10px;
+	}
+}
+
+.containerResearches {
+    width:80%;
+    margin:auto;
+    overflow: hidden;
+    position: center;
+    margin-top: 0%;
+  }
+  .containerResearches form{
+    margin-top:200px;
+  }
+  #blank{
+    padding:40px;
+    color:#ffffff;
+    background:#35424a;
+   
+  }
+
+
+
+
+

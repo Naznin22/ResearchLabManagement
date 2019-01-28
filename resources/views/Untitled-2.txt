@@ -1,0 +1,10 @@
+<div class="fullwidth-block">
+	<div class="container">
+<h1> {{$project->Project_Title}} </h1>
+<medium>&nbsp;&nbsp;&nbsp; Id : &nbsp;&nbsp;&nbsp;&nbsp; {{$project->Project_ID}}</medium></br>
+<medium>&nbsp;&nbsp;&nbsp; Budget :&nbsp;&nbsp;&nbsp;&nbsp; {{$project->Budget}}</medium></br>
+<medium>&nbsp;&nbsp;&nbsp; Completion : &nbsp;&nbsp;&nbsp;&nbsp; {{$project->Completion}}</medium></br>
+<medium>&nbsp;&nbsp;&nbsp; Details : &nbsp;&nbsp;&nbsp;&nbsp; {{$project->Project_details}} </medium>
+<medium>&nbsp;&nbsp;&nbsp; Members : &nbsp;&nbsp;&nbsp;&nbsp; {{$project->members}} </medium>
+</div>
+</div>

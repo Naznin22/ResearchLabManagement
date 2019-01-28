@@ -1,0 +1,12 @@
+<div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4" ></div>
+          <div class="col-sm-4" >
+                <h1> {{$application->user_name}} </h1>
+                <medium>&nbsp;&nbsp;&nbsp; Applicant : &nbsp;&nbsp;&nbsp;&nbsp; {{$application->user_id}}</medium></br>
+                <medium>&nbsp;&nbsp;&nbsp; Subject :&nbsp;&nbsp;&nbsp;&nbsp; {{$application->subject}}</medium></br>
+                <medium>&nbsp;&nbsp;&nbsp; Application Body : &nbsp;&nbsp;&nbsp;&nbsp; {{$application->body}} </medium>
+          </div>
+          
+        </div>
+      </div>
