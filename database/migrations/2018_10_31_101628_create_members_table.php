@@ -14,7 +14,7 @@ class CreateMembersTable extends Migration
     public function up()
     {
         Schema::create('members', function (Blueprint $table) {
-            $table->integer('Project_ID')->unsigned();
+            $table->integer('Project_ID');
             $table->foreign('Project_ID')->references('Project_ID')->on('projects');
             $table->string('project_members');
             $table->timestamps();
