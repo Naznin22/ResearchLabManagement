@@ -134,7 +134,7 @@
 			
 <div class="container">
 			{!! Form::open(['url' => '/apply','files'=>true]) !!}
-
+			{{-- {!! Form::open(['action' => 'pagesController@postContact', 'method' =>'POST', 'enctype' => 'multipart/form-data','files'=>true ]) !!} --}}
 			<div class = "form-group">
 					{{Form::label('email','Email')}}
 					{{Form::text('email','',['class' => 'form-control', 'placeholder' => 'Your Email Address'] )}}
@@ -169,9 +169,9 @@
 				</div>
 
 			<footer class="site-footer">
-				<div class="container">
+				{{-- <div class="container">
 					Your User Id is {{}}
-				</div>
+				</div> --}}
 				<div class="container">
 					<div class="row">
 						<div class="col-md-3">

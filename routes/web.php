@@ -143,5 +143,6 @@ Route::group(['middleware' => ['web','auth']],function(){
 
 // Route::post('contactTest','pagesController@postContact');
 Route::post('apply','pagesController@postContact');
+//Route::get('/apply','pagesController@postContact');
 
 

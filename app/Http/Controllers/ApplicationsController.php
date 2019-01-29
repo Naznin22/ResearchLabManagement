@@ -68,7 +68,7 @@ class ApplicationsController extends Controller
         $application = new Application;
         $application->user_id = $request->input('id');
         $application->user_name = $request->input('name');
-        $application->email = $request->input('email');
+        //$application->email = $request->input('email');
         $application->subject = $request->input('subject');
         $application->body = $request->input('body');
         $application->file = $fileNameToStore;
