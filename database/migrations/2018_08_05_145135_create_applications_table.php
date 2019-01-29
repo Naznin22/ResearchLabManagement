@@ -19,7 +19,7 @@ class CreateApplicationsTable extends Migration
             // $table->integer('user_id')->references('id')->on('users');
             $table->integer('user_id');
             $table->string('user_name');
-            $table->string('email')->unique();
+            //$table->string('email')->unique();
             $table->string('subject');
             $table->string('body'); 
             $table->string('file');
