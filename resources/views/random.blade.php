@@ -1,352 +1,497 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
+
+<!-- Mirrored from benoon.com/html/laboratory/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Jan 2019 20:37:43 GMT -->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
-    <title>Pixel Admin - Responsive Admin Dashboard Template built with Twitter Bootstrap</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Menu CSS -->
-    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
-    <!-- toast CSS -->
-    <link href="../plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
-    <!-- morris CSS -->
-    <link href="../plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
-    <!-- animation CSS -->
-    <link href="css/animate.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="css/stylerandom.css" rel="stylesheet">
-    <!-- color CSS -->
-    <link href="css/colors/blue-dark.css" id="theme" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Laboratory - One page creative HTML5 and CSS3 template">
+<meta name="author" content="ThemeMarket">
+
+<title>Laboratory - One page creative HTML5 and CSS3 template</title>
+
+<!-- STYLES -->
+<link rel="stylesheet" type="text/css" href="csslabfront/supersized.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="csslabfront/supersized.shutter.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="csslabfront/jquery.fancybox1c51.css?v=2.1.2" media="screen" />
+<link rel="stylesheet" type="text/css" href="csslabfront/960.css" />
+<link rel="stylesheet" type="text/css" href="csslabfront/exo/exo.css" />
+<link rel="stylesheet" type="text/css" href="csslabfront/base.css" />
+<link rel="stylesheet" type="text/css" href="csslabfront/style.css" />
+
+
+<!-- SCRIPTS -->
+
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5.js"></script>
 <![endif]-->
+<script type="text/javascript" src="jslabfront/jquery.js"></script>
+<script type="text/javascript" src="jslabfront/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="jslabfront/jquery.easing.min.js"></script>
+<script type="text/javascript" src="jslabfront/modernizr.js"></script>
+<script type="text/javascript" src="jslabfront/jquery.sticky.js"></script>
+<script type="text/javascript" src="jslabfront/jquery.nav.js"></script>
+<script type="text/javascript" src="jslabfront/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="jslabfront/supersized.3.2.7.min.js"></script>
+<script type="text/javascript" src="jslabfront/supersized.shutter.min.js"></script>
+<script type="text/javascript" src="jslabfront/jquery.fancybox62ba.js?v=2.1.3"></script>
+<script type="text/javascript" src="plugin/jquery.form.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="jslabfront/thememarket.js"></script>
 </head>
 
 <body>
-    <!-- Preloader -->
-    {{-- <div class="preloader">
-        <div class="cssload-speeding-wheel"></div>
-    </div> --}}
-    <div id="wrapper">
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top m-b-0">
-            <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></a>
-                <div class="top-left-part"><a class="logo" href="index.html"><b><img src="../plugins/images/pixeladmin-logo.png" alt="home" /></b><span class="hidden-xs"><img src="../plugins/images/pixeladmin-text.png" alt="home" /></span></a></div>
-                <ul class="nav navbar-top-links navbar-left m-l-20 hidden-xs">
-                    <li>
-                        <form role="search" class="app-search hidden-xs">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a>
-                        </form>
-                    </li>
-                </ul>
-                <ul class="nav navbar-top-links navbar-right pull-right">
-                    <li>
-                        <a class="profile-pic" href="#"> <img src="../plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Steave</b> </a>
-                    </li>
-                </ul>
+
+<div id="loading-mask">
+	<p>Please wait. <br />Page is loading... !</p>
+</div>
+
+<!-- Body Wrapper -->
+<div class="body-wrapper">
+    
+    <!-- Header -->
+	<header id="header">
+    	<div class="container">
+        
+            <!-- Logo -->
+            <div class="logo column">
+            	<a href="#"><img src="img/logo.png" alt="ThemeMarket" /></a><br />
             </div>
-            <!-- /.navbar-header -->
-            <!-- /.navbar-top-links -->
-            <!-- /.navbar-static-side -->
-        </nav>
-        <!-- Left navbar-header -->
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse slimscrollsidebar">
-                <ul class="nav" id="side-menu">
-                    <li style="padding: 10px 0 0;">
-                        <a href="index.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><span class="hide-menu">Dashboard</span></a>
-                    </li>
-                    <li>
-                        <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">Profile</span></a>
-                    </li>
-                    <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">Basic Table</span></a>
-                    </li>
-                    <li>
-                        <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i><span class="hide-menu">Icons</span></a>
-                    </li>
-                    <li>
-                        <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class="hide-menu">Google Map</span></a>
-                    </li>
-                    <li>
-                        <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i><span class="hide-menu">Blank Page</span></a>
-                    </li>
-                    <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i><span class="hide-menu">Error 404</span></a>
-                    </li>
-                </ul>
-                <div class="center p-20">
-                    <span class="hide-menu"><a href="http://wrappixel.com/templates/pixeladmin/" target="_blank" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Upgrade to Pro</a></span>
-                </div>
+            <!-- /Logo -->
+            
+            
+
+        </div>
+        <!-- Slider -->
+        <div class="slider">    
+            <!--Arrow Navigation
+            <a id="prevslide" class="load-item"></a>
+            <a id="nextslide" class="load-item"></a>-->
+
+            <!--Time Bar-->
+            <div id="progress-back" class="load-item">
+                <div id="progress-bar"></div>
             </div>
         </div>
-        <!-- Left navbar-header end -->
-        <!-- Page Content -->
-        <div id="page-wrapper">
-            <div class="container-fluid">
-                <div class="row bg-title">
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard</h4> </div>
-                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <a href="http://wrappixel.com/templates/pixeladmin/" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Upgrade to Pro</a>
-                        <ol class="breadcrumb">
-                            <li><a href="#">Dashboard</a></li>
-                        </ol>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <!-- row -->
-                <div class="row">
-                    <!--col -->
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="white-box">
-                            <div class="col-in row">
-                                <div class="col-md-6 col-sm-6 col-xs-6"> <i data-icon="E" class="linea-icon linea-basic"></i>
-                                    <h5 class="text-muted vb">MYNEW CLIENTS</h5> </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <h3 class="counter text-right m-t-15 text-danger">23</h3> </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span class="sr-only">40% Complete (success)</span> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                    <!--col -->
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="white-box">
-                            <div class="col-in row">
-                                <div class="col-md-6 col-sm-6 col-xs-6"> <i class="linea-icon linea-basic" data-icon="&#xe01b;"></i>
-                                    <h5 class="text-muted vb">NEW PROJECTS</h5> </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <h3 class="counter text-right m-t-15 text-megna">169</h3> </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-megna" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span class="sr-only">40% Complete (success)</span> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                    <!--col -->
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="white-box">
-                            <div class="col-in row">
-                                <div class="col-md-6 col-sm-6 col-xs-6"> <i class="linea-icon linea-basic" data-icon="&#xe00b;"></i>
-                                    <h5 class="text-muted vb">NEW INVOICES</h5> </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <h3 class="counter text-right m-t-15 text-primary">157</h3> </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span class="sr-only">40% Complete (success)</span> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <!-- /.row -->
-                <!--row -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="white-box">
-                            <h3 class="box-title">Sales Difference</h3>
-                            <ul class="list-inline text-right">
-                                <li>
-                                    <h5><i class="fa fa-circle m-r-5" style="color: #dadada;"></i>Site A View</h5>
-                                </li>
-                                <li>
-                                    <h5><i class="fa fa-circle m-r-5" style="color: #aec9cb;"></i>Site B View</h5>
-                                </li>
-                            </ul>
-                            <div id="morris-area-chart2" style="height: 370px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!--row -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="white-box">
-                            <h3 class="box-title">Recent sales
-                                <div class="col-md-2 col-sm-4 col-xs-12 pull-right">
-                                    <select class="form-control pull-right row b-none">
-                                        <option>March 2016</option>
-                                        <option>April 2016</option>
-                                        <option>May 2016</option>
-                                        <option>June 2016</option>
-                                        <option>July 2016</option>
-                                    </select>
-                                </div>
-                            </h3>
-                            <div class="table-responsive">
-                                <table class="table ">
-                                    <thead>
-                                        <tr>
-                                            <th>NAME</th>
-                                            <th>STATUS</th>
-                                            <th>DATE</th>
-                                            <th>PRICE</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="txt-oflo">Pixel admin</td>
-                                            <td>SALE</td>
-                                            <td class="txt-oflo">April 18</td>
-                                            <td><span class="text-success">$24</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Real Homes</td>
-                                            <td>EXTENDED</td>
-                                            <td class="txt-oflo">April 19</td>
-                                            <td><span class="text-info">$1250</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Medical Pro</td>
-                                            <td>TAX</td>
-                                            <td class="txt-oflo">April 20</td>
-                                            <td><span class="text-danger">-$24</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Hosting press</td>
-                                            <td>SALE</td>
-                                            <td class="txt-oflo">April 21</td>
-                                            <td><span class="text-success">$24</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Helping Hands</td>
-                                            <td>MEMBER</td>
-                                            <td class="txt-oflo">April 22</td>
-                                            <td><span class="text-success">$24</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Digital Agency</td>
-                                            <td>SALE</td>
-                                            <td class="txt-oflo">April 23</td>
-                                            <td><span class="text-danger">-$14</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Helping Hands</td>
-                                            <td>MEMBER</td>
-                                            <td class="txt-oflo">April 22</td>
-                                            <td><span class="text-success">$64</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table> <a href="#">Check all the sales</a> </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-                <!-- row -->
-                <div class="row">
-                    <div class="col-md-12 col-lg-6 col-sm-12">
-                        <div class="white-box">
-                            <h3 class="box-title">Recent Comments</h3>
-                            <div class="comment-center">
-                                <div class="comment-body">
-                                    <div class="user-img"> <img src="../plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"></div>
-                                    <div class="mail-contnet">
-                                        <h5>Pavan kumar</h5> <span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat.</span><a href="javacript:void(0)" class="action"><i class="ti-close text-danger"></i></a> <a href="javacript:void(0)" class="action"><i class="ti-check text-success"></i></a><span class="time pull-right">April 14, 2016</span></div>
-                                </div>
-                                <div class="comment-body">
-                                    <div class="user-img"> <img src="../plugins/images/users/sonu.jpg" alt="user" class="img-circle"> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Sonu Nigam</h5> <span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat.</span><a href="javacript:void(0)" class="action"><i class="ti-close text-danger"></i></a> <a href="javacript:void(0)" class="action"><i class="ti-check text-success"></i></a><span class="time pull-right">April 14, 2016</span></div>
-                                </div>
-                                <div class="comment-body b-none">
-                                    <div class="user-img"> <img src="../plugins/images/users/arijit.jpg" alt="user" class="img-circle"> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Arijit Sinh</h5> <span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. </span><a href="javacript:void(0)" class="action"><i class="ti-close text-danger"></i></a> <a href="javacript:void(0)" class="action"><i class="ti-check text-success"></i></a><span class="time pull-right">April 14, 2016</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="white-box">
-                            <h3 class="box-title">You have 5 new messages</h3>
-                            <div class="message-center">
-                                <a href="#">
-                                    <div class="user-img"> <img src="../plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:30 AM</span> </div>
-                                </a>
-                                <a href="#">
-                                    <div class="user-img"> <img src="../plugins/images/users/sonu.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span> </div>
-                                </a>
-                                <a href="#">
-                                    <div class="user-img"> <img src="../plugins/images/users/arijit.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Arijit Sinh</h5> <span class="mail-desc">I am a singer!</span> <span class="time">9:08 AM</span> </div>
-                                </a>
-                                <a href="#">
-                                    <div class="user-img"> <img src="../plugins/images/users/genu.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Genelia Deshmukh</h5> <span class="mail-desc">I love to do acting and dancing</span> <span class="time">9:08 AM</span> </div>
-                                </a>
-                                <a href="#" class="b-none">
-                                    <div class="user-img"> <img src="../plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
+        <!-- /Slider -->
+    </header>
+    <!-- / Header -->
+    
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a href="#header">Laboratory</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#works">Our Works</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- /Nav -->
+    
+    <!-- About -->
+    <section id="about">
+    	<div class="container">
+            
+            <div class="title-white column">
+                <h1>ABOUT</h1>
+                <p>Get to know us better</p>
             </div>
-            <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2017 &copy; Pixel Admin brought to you by wrappixel.com </footer>
+            
+            <div class="idea column">
+            	<div class="idea-desc">
+                	<h1 class="n1">Let's MAKE</h1>
+                    <h1 class="n2">YOUR LIFE MORE</h1>
+                    <h1 class="n3">BRIGHTER</h1>
+                    
+                    <h4>We make great designs under great creativity</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  </p>
+                </div>
+                
+                <div class="idea-icons">
+                	<span class="icon1 icons"><img src="img/idea/1.png" alt="ThemeMarket" /></span>
+                    <span class="icon2 icons"><img src="img/idea/2.png" alt="ThemeMarket" /></span>
+                    <span class="icon3 icons"><img src="img/idea/3.png" alt="ThemeMarket" /></span>
+                    <span class="icon4 icons"><img src="img/idea/4.png" alt="ThemeMarket" /></span>
+                    <span class="icon5 icons"><img src="img/idea/5.png" alt="ThemeMarket" /></span>
+                    <span class="icon6 icons"><img src="img/idea/6.png" alt="ThemeMarket" /></span>
+                    <span class="icon7 icons"><img src="img/idea/7.png" alt="ThemeMarket" /></span>
+                    <span class="icon8 icons"><img src="img/idea/8.png" alt="ThemeMarket" /></span>
+                    <span class="icon9 icons"><img src="img/idea/9.png" alt="ThemeMarket" /></span>
+                    <span class="icon10 icons"><img src="img/idea/10.png" alt="ThemeMarket" /></span>
+                    <span class="icon11 icons"><img src="img/idea/11.png" alt="ThemeMarket" /></span>
+                    <span class="icon12 icons"><img src="img/idea/12.png" alt="ThemeMarket" /></span>
+                    <span class="icon13 icons"><img src="img/idea/13.png" alt="ThemeMarket" /></span>
+                    <span class="icon14 icons"><img src="img/idea/14.png" alt="ThemeMarket" /></span>
+                    <span class="icon15 icons"><img src="img/idea/15.png" alt="ThemeMarket" /></span>
+                    <span class="icon16 icons"><img src="img/idea/16.png" alt="ThemeMarket" /></span>
+                    <span class="icon17 icons"><img src="img/idea/17.png" alt="ThemeMarket" /></span>
+                    <span class="icon18 icons"><img src="img/idea/18.png" alt="ThemeMarket" /></span>
+                    <span class="icon19 icons"><img src="img/idea/19.png" alt="ThemeMarket" /></span>
+                    <span class="icon20 icons"><img src="img/idea/20.png" alt="ThemeMarket" /></span>
+                    <span class="icon21 icons"><img src="img/idea/21.png" alt="ThemeMarket" /></span>
+                    <span class="icon22 icons"><img src="img/idea/22.png" alt="ThemeMarket" /></span>
+                    <span class="icon23 icons"><img src="img/idea/23.png" alt="ThemeMarket" /></span>
+                    <span class="icon24 icons"><img src="img/idea/24.png" alt="ThemeMarket" /></span>
+                	<span class="idea-contact"></span>
+                	<span class="contact-text">Contact</span>
+                </div>
+                
+            </div>
+            
+            <div class="approach column">
+            	<h4 class="ap-tit">Our Approach</h4>
+                
+                <div class="approach-line"></div>
+                <div class="approach1">
+                    <img src="img/a-idea.png" alt="ThemeMarket" style="alignment-adjust:middle" />
+                    <h4>Idea</h4>
+                </div>
+                <div class="approach2">
+                    <img src="img/a-design.png" alt="ThemeMarket" style="alignment-adjust:middle" />
+                    <h4>Design</h4>
+                </div>
+                <div class="approach3">
+                    <img src="img/a-code.png" alt="ThemeMarket" style="alignment-adjust:middle" />
+                    <h4>Coding</h4>
+                </div>
+                <div class="approach4">
+                    <img src="img/a-success.png" alt="ThemeMarket" style="alignment-adjust:middle" />
+                    <h4>Money</h4>
+                </div>
+                
+            	
+            </div>
+            <div class="column"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 
+wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
+ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  </p></div>
+            
         </div>
-        <!-- /#page-wrapper -->
-    </div>
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Menu Plugin JavaScript -->
-    <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
-    <!--slimscroll JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
-    <!--Wave Effects -->
-    <script src="js/waves.js"></script>
-    <!--Counter js -->
-    <script src="../plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
-    <script src="../plugins/bower_components/counterup/jquery.counterup.min.js"></script>
-    <!--Morris JavaScript -->
-    <script src="../plugins/bower_components/raphael/raphael-min.js"></script>
-    <script src="../plugins/bower_components/morrisjs/morris.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/custom.min.js"></script>
-    <script src="js/dashboard1.js"></script>
-    <script src="../plugins/bower_components/toast-master/js/jquery.toast.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $.toast({
-            heading: 'Welcome to Pixel admin',
-            text: 'Use the predefined ones, or specify a custom position object.',
-            position: 'top-right',
-            loaderBg: '#ff6849',
-            icon: 'info',
-            hideAfter: 3500,
-            stack: 6
-        })
-    });
-    </script>
+    </section>
+    <!-- / About -->
+    
+    <!-- Services -->
+    <section id="services">
+    	<div class="container">
+        
+        	<div class="title-black column">
+                <h1>SERVICES</h1>
+                <p>We will do our best</p>
+            </div>
+            
+            <div class="all-service">
+            	<div class="center-circle">
+                	<img src="img/services.png" alt="ThemeMarket" style="alignment-baseline:middle" />
+                    <h4>Our Services</h4>
+                </div>
+            
+                <div class="service-circles column" id="rays">
+                    <div class="service1" id="ser1">
+                        <img src="img/s-ontime.png" alt="ThemeMarket" style="alignment-baseline:middle" />
+                        <h4>On Time</h4>
+                    </div>
+                    <div class="service2" id="ser2">
+                        <img src="img/s-support.png" alt="ThemeMarket" style="alignment-baseline:middle" />
+                        <h4>Support</h4>
+                    </div>
+                    <div class="service3" id="ser3">
+                        <img src="img/s-music.png" alt="ThemeMarket" style="alignment-baseline:middle" />
+                        <h4>Music</h4>
+                    </div>
+                    <div class="service4" id="ser4">
+                        <img src="img/s-photo.png" alt="ThemeMarket" style="alignment-baseline:middle" />
+                        <h4>Photo</h4>
+                    </div>
+                    <div class="service5" id="ser5">
+                        <img src="img/s-movie.png" alt="ThemeMarket" style="alignment-baseline:middle" />
+                        <h4>Movie</h4>
+                    </div>
+                    <div class="service6" id="ser6">
+                        <img src="img/s-design.png" alt="ThemeMarket" style="alignment-baseline:middle" />
+                        <h4>Design</h4>
+                    </div>
+                </div>
+            </div>
+            	
+            
+            <div class="service-description column-one-half">
+            	<h4>On TIME SERVICE</h4>
+                <p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental: in fact, it va esser me que Occidental es.</p>
+            </div>
+            <div class="service-description column-one-half">
+            	<h4>Music SERVICE</h4>
+                <p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental: in fact, it va esser me que Occidental es.</p>
+            </div>
+            <div class="service-description column-one-half">
+            	<h4>Movie SERVICE</h4>
+                <p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental: in fact, it va esser me que Occidental es.</p>
+            </div>
+            <div class="service-description column-one-half">
+            	<h4>Web Design SERVICE</h4>
+                <p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental: in fact, it va esser me que Occidental es.</p>
+            </div>
+            <div class="service-description column-one-half">
+            	<h4>Photography SERVICE</h4>
+                <p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental: in fact, it va esser me que Occidental es.</p>
+            </div>
+            <div class="service-description column-one-half">
+            	<h4>Online support</h4>
+                <p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental: in fact, it va esser me que Occidental es.</p>
+            </div>
+        
+        </div>
+    </section>
+    <!-- / Services -->
+    
+    <!-- Works -->
+    <section id="works">
+    	<div class="container">
+        
+        	<div class="title-white column">
+                <h1>WORKS</h1>
+                <p>Works we are proud of</p>
+            </div>
+            
+            <div class="work-item column-one-third">
+
+                @if(count($projects) > 0 )
+                @foreach($projects as $project)
+            	<div class="view-item">
+                	<img src="images/bg01.jpg" alt="ThemeMarket" />
+                    <div class="mask">
+                            <h2 class="feature-title"><a href="/projects/{{$project->Project_ID}}">{{$project->Project_Title}}</a></h2>
+                            <p>“We hope the nanofabrication community will be excited about the release of this software</p>
+                            <a href="" class="button">Learn more</a>                        <a href="img/slider/1.jpg" class="info fancybox" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"></a>
+                    </div>
+                </div>
+                <h4>OUR WORKS</h4>
+                <p>Graphics / Design</p>
+            </div>
+            @endforeach
+            @else 
+                    <p>No projects found!</p>
+            @endif
+            {{ $projects->appends([ 's' => $s ])->links() }}
+            <div class="work-item column-one-third">
+            	<div class="view-item">
+                	<img src="img/removeble/image.png" alt="ThemeMarket" />
+                    <div class="mask">
+                    	<p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues.</p>
+                        <a href="img/slider/8.jpg" class="info fancybox" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"></a>
+                    </div>
+                </div>
+                <h4>OUR WORKS</h4>
+                <p>Graphics / Design</p>
+            </div>
+            <div class="work-item column-one-third">
+            	<div class="view-item">
+                	<img src="img/removeble/image.png" alt="ThemeMarket" />
+                    <div class="mask">
+                    	<p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues.</p>
+                        <a href="img/slider/3.jpg" class="info fancybox" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"></a>
+                    </div>
+                </div>
+                <h4>OUR WORKS</h4>
+                <p>Graphics / Design</p>
+            </div>
+            <div class="work-item column-one-third">
+            	<div class="view-item">
+                	<img src="img/removeble/image.png" alt="ThemeMarket" />
+                    <div class="mask">
+                    	<p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues.</p>
+                        <a href="img/slider/6.jpg" class="info fancybox" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"></a>
+                    </div>
+                </div>
+                <h4>OUR WORKS</h4>
+                <p>Graphics / Design</p>
+            </div>
+            <div class="work-item column-one-third">
+            	<div class="view-item">
+                	<img src="img/removeble/image.png" alt="ThemeMarket" />
+                    <div class="mask">
+                    	<p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues.</p>
+                        <a href="img/slider/1.jpg" class="info fancybox" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"></a>
+                    </div>
+                </div>
+                <h4>OUR WORKS</h4>
+                <p>Graphics / Design</p>
+            </div>
+            <div class="work-item column-one-third">
+            	<div class="view-item">
+                	<img src="img/removeble/image.png" alt="ThemeMarket" />
+                    <div class="mask">
+                    	<p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues.</p>
+                        <a href="img/slider/7.jpg" class="info fancybox" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"></a>
+                    </div>
+                </div>
+                <h4>OUR WORKS</h4>
+                <p>Graphics / Design</p>
+            </div>
+            <div class="work-item column-one-third">
+            	<div class="view-item">
+                	<img src="img/removeble/image.png" alt="ThemeMarket" />
+                    <div class="mask">
+                    	<p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues.</p>
+                        <a href="img/slider/3.jpg" class="info fancybox" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"></a>
+                    </div>
+                </div>
+                <h4>OUR WORKS</h4>
+                <p>Graphics / Design</p>
+            </div>
+            <div class="work-item column-one-third">
+            	<div class="view-item">
+                	<img src="img/removeble/image.png" alt="ThemeMarket" />
+                    <div class="mask">
+                    	<p>Ma quande lingues coalesce, li grammatica del resultant lingue plu simplic e regulari quam ti del coalescent lingues.</p>
+                        <a href="img/slider/8.jpg" class="info fancybox" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"></a>
+                    </div>
+                </div>
+                <h4>OUR WORKS</h4>
+                <p>Graphics / Design</p>
+            </div>
+            
+        </div>
+    </section>
+    <!-- / Works -->
+    
+    <!-- Team -->
+    <section id="team">
+    	<div class="container">
+        
+        	<div class="title-black column">
+                <h1> TEAM </h1>
+                <p>Our success - people we employ</p>
+            </div>
+            
+            <div class="team-members">
+            	<a href="#" class="social-icons twitter"></a>
+                <a href="#" class="social-icons facebook"></a>
+                <a href="#" class="social-icons vimeo"></a>
+                <a href="#" class="social-icons skype"></a>
+                <a href="#" class="social-icons linkedin"></a>
+                <div class="member-image"><img src="img/removeble/MAN.png" alt="ThemeMarket" /></div>
+                <h4>Brandon Doel</h4>
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <div class="team-members">
+            	<a href="#" class="social-icons twitter"></a>
+                <a href="#" class="social-icons facebook"></a>
+                <a href="#" class="social-icons vimeo"></a>
+                <a href="#" class="social-icons skype"></a>
+                <a href="#" class="social-icons linkedin"></a>
+                <div class="member-image"><img src="img/removeble/MAN.png" alt="ThemeMarket" /></div>
+                <h4>Brandon Doel</h4>
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <div class="team-members">
+            	<a href="#" class="social-icons twitter"></a>
+                <a href="#" class="social-icons facebook"></a>
+                <a href="#" class="social-icons vimeo"></a>
+                <a href="#" class="social-icons skype"></a>
+                <a href="#" class="social-icons linkedin"></a>
+                <div class="member-image"><img src="img/removeble/MAN.png" alt="ThemeMarket" /></div>
+                <h4>Brandon Doel</h4>
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <div class="team-members">
+            	<a href="#" class="social-icons twitter"></a>
+                <a href="#" class="social-icons facebook"></a>
+                <a href="#" class="social-icons vimeo"></a>
+                <a href="#" class="social-icons skype"></a>
+                <a href="#" class="social-icons linkedin"></a>
+                <div class="member-image"><img src="img/removeble/MAN.png" alt="ThemeMarket" /></div>
+                <h4>Brandon Doel</h4>
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <div class="team-members">
+            	<a href="#" class="social-icons twitter"></a>
+                <a href="#" class="social-icons facebook"></a>
+                <a href="#" class="social-icons vimeo"></a>
+                <a href="#" class="social-icons skype"></a>
+                <a href="#" class="social-icons linkedin"></a>
+                <div class="member-image"><img src="img/removeble/MAN.png" alt="ThemeMarket" /></div>
+                <h4>Brandon Doel</h4>
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <div class="about-team column">
+            	<h4>About Team</h4>
+                <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It 
+uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
+The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+            </div>
+            
+    	</div>        
+    </section>
+    <!-- / Team -->
+    
+    <!-- Contact -->
+    <section id="contact">
+    	<div class="container">
+        
+        	<div class="title-white column">
+                <h1>CONTACT</h1>
+                <p>Get in touch with us</p>
+            </div>
+
+        </div>
+        <div class="map" id="map"></div>
+        <div class="container">
+        	<div class="column-one-half">
+            	<h4>Contact Informations</h4>
+                <p><span class="address-text">Creative Laboratory <br /> 77 New York Avenue,  <br /> New York, USA 10000</span></p>
+                <p><span class="email-text">samplemail@mail.ru</span></p>
+                <p><span class="phone-text">(+998 90) 905 54 53 <br /> (+998 90) 905 54 53</span></p>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus <br />
+qui blanditiis praesentium voluptatum deleniti atque corrupti <br />
+quos dolores et quas molestias excepturi sint occaecati <br />
+cupiditate non provident,</p>
+            </div>
+            
+            <div class="column-one-half form">
+            	<form action="#" method="post" id="contactForm" name="contactForm">
+                	<div class="input-section"><input type="text" class="com-text" name="yourname" id="yourname" /><label>Name</label></div>
+                    <div class="input-section"><input type="text" class="com-text" name="email" id="email" /><label>Email</label></div>
+                    <div class="input-section"><input type="text" class="com-text" name="tele" id="tele" /><label>Subject</label></div>
+                    <div class="input-section"><textarea class="textbox" name="message" rows="10" cols="20"></textarea><label>Message</label></div>
+                    <div class="input-section"><a href="javascript:submitForm();" class="send">Send</a></div>
+                </form>
+                <div class="alertMessage"></div>
+            </div>
+        </div>
+    </section>
+    <!-- / Contact -->
+    
+    <!-- Footer -->
+    <footer id="footer">
+		<div class="container">
+        	<div class="foot-logo"><img src="img/foot-logo.png" alt="ThemeMarket" style="alignment-baseline:middle" /></div>
+            <ul>
+            	<li><a href="#" class="foot-twitter foot-icons"></a></li>
+                <li><a href="#" class="foot-facebook foot-icons"></a></li>
+                <li><a href="#" class="foot-skype foot-icons"></a></li>
+                <li><a href="#" class="foot-linkedin foot-icons"></a></li>
+                <li><a href="#" class="foot-vimeo foot-icons"></a></li>
+            </ul>
+            <p><a href="http://themeforest.net/user/ThemeMarket/portfolio" target="_blank">Copyright 2012. ThemeMarket</a></p>
+        </div>
+    </footer>
+    <!-- / Footer -->
+    
+</div>
+<!-- / Body Wrapper -->
+
 </body>
 
+<!-- Mirrored from benoon.com/html/laboratory/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Jan 2019 20:38:30 GMT -->
 </html>

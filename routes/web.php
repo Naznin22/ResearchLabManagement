@@ -57,9 +57,7 @@ Route::get('/news',function(){
     return view('news');
 });
 
-Route::get('/random',function(){
-    return view('random');
-});
+// Route::get('/random','ProjectsController@index');
 
 Route::get('/mail', function () {
     //Selected::find(1)->notify(new selectionDone);

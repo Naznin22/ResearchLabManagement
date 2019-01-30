@@ -53,46 +53,13 @@ class ContactController extends Controller
             $mail->from($request);
             $mail->to('nazninhaque7622@gmail.com');
         });
-        // Mail::send( ['text' => 'mail'], ['name' => 'Rhea'], function($message){
-        //     // $message->attach('D:\Rhea\Pictures\aayan');
-        //         $message->to('rheanaznin47@gmail.com', 'To Naznin')->subject('Test Email');
-                
-        //         $message->from('nazninhaque7622@gmail.com', 'Naznin');
-        // } );
-
-    //     $data = array(
-    //     'email' => $request->email,
-    //     'subject' => $request->subject,
-    //     'body' => $request->body
-    //     );
-    //     // $contact = [];
        
-    //    Mail::send('emails.contact', $data, function($message) use ($data){
-    //        $message->to($data->email);
-    //        $message->from('nazninhaque7622@gmail.com');
-    //        $message->subject('My Application');
-    //        $message->body($data['subject']);
-    //        $message->attach($data['file']->getRealPath(),array(
-    //            'as' => 'file'. $data['file']->getClientOriginalExtension(),
-    //            'mime' => $data['file']->getMimeType()
-    //        ));
 
-
-    //    });
+    //  
 
     //    session::flash('success',"mail sent");
 
-        // $contact['name'] = $request->get('name');
-        // $contact['email'] = $request->get('email');
-        // $contact['msg'] = $request->get('msg');
-      
-    
-        // Mail delivery logic goes here
-    
-        // flash('Your message has been sent!')->success();
-        // Mail::to(config('mail.support.address'))->send(new ContactEmail($contact));
-    
-        // return redirect()->route('contact.create');
+       
         return Redirect::to('/mail');
         
     }

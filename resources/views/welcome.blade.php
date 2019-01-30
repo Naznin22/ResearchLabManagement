@@ -101,53 +101,42 @@
 			</header>
 
 			
-
 			<main class="main-content">
+				
+			
 				<div class="fullwidth-block">
+						<div class="row">
+								<div class="container">
+										<h1>Recent Works</h1>
+								</div>
+								
+							</div>
 					<div class="container">
 						<div class="row">
+								@if(count($projects) > 0 )
+								@foreach($projects as $project)
+								
 							<div class="col-md-3 col-sm-6">
 								<div class="feature">
 									<img src="images/icon-research-small.png" alt="" class="feature-image">
-									<h2 class="feature-title">Research</h2>
+									<h2 class="feature-title"><a href="/projects/{{$project->Project_ID}}">{{$project->Project_Title}}</a></h2>
 									<p>“We hope the nanofabrication community will be excited about the release of this software</p>
 									<a href="" class="button">Learn more</a>
 								</div>
 							</div>
-							<div class="col-md-3 col-sm-6">
-								<div class="feature">
-									<img src="images/icon-medicine-small.png" alt="" class="feature-image">
-									<h2 class="feature-title">Medicice</h2>
-									<p>“We hope the nanofabrication community will be excited about the release of this software</p>
-									<a href="services" class="button">Learn more</a>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<div class="feature">
-									<img src="images/icon-genetics-small.png" alt="" class="feature-image">
-									<h2 class="feature-title">Genetics</h2>
-									<p>“We hope the nanofabrication community will be excited about the release of this software</p>
-									<a href="services" class="button">Learn more</a>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<div class="feature">
-									<img src="images/icon-energy-small.png" alt="" class="feature-image">
-									<h2 class="feature-title">Energy</h2>
-									<p>“We hope the nanofabrication community will be excited about the release of this software</p>
-									<a href="services" class="button">Learn more</a>
-								</div>
-							</div>
+							@endforeach
+                            @else 
+                                    <p>No projects found!</p>
+                            @endif
+							{{ $projects->appends([ 's' => $s ])->links() }}
+							
+							
 						</div> <!-- .row -->
 					</div> <!-- .container -->
 				</div> <!-- .fullwidth-block -->
 
-				<div class="container">
-					<div class="fullwidth-block">
-					<h1>Researches</h1>
-				</div>
-				</div>
-
+				
+{{-- 
 				<div class="fullwidth-block">
 					<div class="container">
 						<div class="project-list">
@@ -169,7 +158,7 @@
 							
 						</div>
 					</div>
-				</div>
+				</div> --}}
 
 				<div class="fullwidth-block" data-bg-color="#edf2f4">
 					<div class="container">
