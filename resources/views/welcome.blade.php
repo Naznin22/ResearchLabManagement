@@ -103,7 +103,133 @@
 			
 			<main class="main-content">
 				
-			
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<h2 class="section-title">Why choose us?</h2>
+								<ol class="circle">
+								@if(count($whychooseuses) > 0 )
+								@foreach($whychooseuses as $whychooseus)
+								
+										<li>
+											<h3> {{$whychooseus->title}}</h3>
+											<p>  {{$whychooseus->description}}</p>
+										</li>
+										
+									
+							@endforeach
+						</ol>
+                            @else 
+                                    <p>No projects found!</p>
+                            @endif
+								
+							</div>
+							<div class="col-md-4">
+								<h2 class="section-title">Usefull links</h2>
+								{{-- <p>Nemo mollitia iste quis sed iure tempora dolore incidunt praesentium aspernatur! Praesentium impedit aperiam, commodi magnam accusamus nobis. Quia, velit sunt asperiores?</p> --}}
+								<ul class="arrow-list has-border">
+									<li>https://github.com/usnistgov/NEMO </li>
+									<li>https://github.com/usnistgov/NEMO </li>
+
+									<li>https://github.com/usnistgov/NEMO </li>
+
+									<li>https://github.com/usnistgov/NEMO </li>
+
+									<li>https://github.com/usnistgov/NEMO </li>
+									<li>https://github.com/usnistgov/NEMO </li>
+
+								
+								</ul>
+							</div>
+							<div class="col-md-4">
+								<h2 class="section-title">Testimonials</h2>
+								<ul class="testimonial-list">
+									<li>
+										<blockquote>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis</p>
+											<cite>Anthony Rubbens</cite>
+										</blockquote>
+									</li>
+									<li>
+										<blockquote>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis</p>
+											<cite>Anthony Rubbens</cite>
+										</blockquote>
+									</li>
+									<li>
+										<blockquote>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis</p>
+											<cite>Anthony Rubbens</cite>
+										</blockquote>
+									</li>
+								</ul>
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .container -->		
+				</div> <!-- .fullwidth-block -->
+
+				<div class="fullwidth-block" data-bg-color="#edf2f4">
+					<div class="container">
+						<h2 class="section-title">Our team</h2>
+						<div class="row">
+							<div class="col-md-3">
+								<div class="team">
+									<img src="images/person-1.jpg" alt="" class="team-image">
+									<h3 class="team-name">Howard Hanson</h3>
+									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
+									<div class="social-links">
+										<a href=""><i class="fa fa-facebook"></i></a>
+										<a href=""><i class="fa fa-twitter"></i></a>
+										<a href=""><i class="fa fa-google-plus"></i></a>
+										<a href=""><i class="fa fa-pinterest"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="team">
+									<img src="images/person-2.jpg" alt="" class="team-image">
+									<h3 class="team-name">Jannet Smith</h3>
+									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
+									<div class="social-links">
+										<a href=""><i class="fa fa-facebook"></i></a>
+										<a href=""><i class="fa fa-twitter"></i></a>
+										<a href=""><i class="fa fa-google-plus"></i></a>
+										<a href=""><i class="fa fa-pinterest"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="team">
+									<img src="images/person-3.jpg" alt="" class="team-image">
+									<h3 class="team-name">Paul Newman</h3>
+									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
+									<div class="social-links">
+										<a href=""><i class="fa fa-facebook"></i></a>
+										<a href=""><i class="fa fa-twitter"></i></a>
+										<a href=""><i class="fa fa-google-plus"></i></a>
+										<a href=""><i class="fa fa-pinterest"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="team">
+									<img src="images/person-4.jpg" alt="" class="team-image">
+									<h3 class="team-name">Sarah Dowson</h3>
+									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
+									<div class="social-links">
+										<a href=""><i class="fa fa-facebook"></i></a>
+										<a href=""><i class="fa fa-twitter"></i></a>
+										<a href=""><i class="fa fa-google-plus"></i></a>
+										<a href=""><i class="fa fa-pinterest"></i></a>
+									</div>
+								</div>
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div>
+
+
 				<div class="fullwidth-block">
 						<div class="row">
 								<div class="container">
@@ -234,6 +360,60 @@
 						</div>
 					</div>
 				</div> --}}
+				
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="checked-box">
+									<h3>Numquam eius modi tempora incidunt ut labore</h3>
+									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+								</div>
+
+								<div class="checked-box">
+									<h3>Numquam eius modi tempora incidunt ut labore</h3>
+									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+								</div>
+
+								<div class="checked-box">
+									<h3>Numquam eius modi tempora incidunt ut labore</h3>
+									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="checked-box">
+									<h3>Numquam eius modi tempora incidunt ut labore</h3>
+									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+								</div>
+
+								<div class="checked-box">
+									<h3>Numquam eius modi tempora incidunt ut labore</h3>
+									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+								</div>
+
+								<div class="checked-box">
+									<h3>Numquam eius modi tempora incidunt ut labore</h3>
+									<p>Voluptatem accusantium doloremque laudantium totam aperiam, eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem voluptas.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+
+				<div class="fullwidth-block" data-bg-color="#edf2f4">
+					<div class="container">
+						<div class="subscribe-form">
+							<h2>Join our newsletter</h2>
+							<form action="#">
+								<input type="text" placeholder="Enter your email">
+								<input type="submit" value="Subscribe">
+							</form>
+						</div>
+					</div>
+				</div>
 
 			</main> <!-- .main-content -->
 

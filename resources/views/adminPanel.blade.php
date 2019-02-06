@@ -354,6 +354,41 @@
 
                         </div>
                     </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="white-box">                        
+                                <div class = "container">
+                                <a id="add"> <h3>Why Choose US</h3></a>
+                                </div>
+                                <div class = "container">
+
+                                {!! Form::open(['url' => '/whychoose']) !!}
+                                {{-- <div class = "form-group" class="col-sm-1">
+                                    {{Form::label('id','Id')}}
+                                    {{Form::text('id','',['class' => 'form-control', 'placeholder' => 'Id'] )}}
+                                </div> --}}
+                
+                                <div class = "form-group" class="col-sm-2">
+                                        {{Form::label('title','Title')}}
+                                        {{Form::text('title','',['class' => 'form-control', 'placeholder' => 'Title'] )}}
+                                    </div>
+                
+                                <div class = "form-group" class="col-sm-2">
+                                        {{Form::label('description','Description')}}
+                                        {{Form::text('description','',['class' => 'form-control', 'placeholder' => 'Description'] )}}
+                                    </div>
+                                    
+                                   
+                
+                                        {{Form::submit('Submit',['class' => 'btn'])}}
+                                    
+                                {!! Form::close() !!}
+        
+                                </div>
+                            </div>
+
 {{-- <div class="row">
         <div class="white-box">
             <h3>Add Members</h3>

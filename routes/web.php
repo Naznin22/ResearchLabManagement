@@ -9,7 +9,7 @@ use App\Selected;
 
 
 // Email related routes
-Route::get('send', 'MailController@send')->name('send');
+//Route::get('send', 'MailController@send')->name('send');
 
 
 
@@ -141,6 +141,9 @@ Route::group(['middleware' => ['web','auth']],function(){
 
 // Route::post('contactTest','pagesController@postContact');
 Route::post('apply','pagesController@postContact');
+Route::post('whychoose','ProjectsController_admin@storeWhychoose');
+// Route::get('welcome','whychooseusController@index');
+
 //Route::get('/apply','pagesController@postContact');
 
 

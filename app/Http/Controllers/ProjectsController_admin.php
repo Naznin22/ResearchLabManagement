@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Member;
-
+use App\whychooseus;
+use Redirect;
 class ProjectsController_admin extends Controller
 {
     /**
@@ -49,6 +50,7 @@ class ProjectsController_admin extends Controller
             'id'=>'required',
             'title'=>'required',
             'details'=>'required',
+            
             'budget'=>'required',
             'completion'=>'required'
         ]);
@@ -65,12 +67,36 @@ class ProjectsController_admin extends Controller
         $project->Completion= $request->input('completion');
         $project->public = $request->input('public');
 
-        
-       
         $project->push();
+
+       
 
         return redirect('/adminPanelUser');
     }
+
+
+    public function storeWhychoose(Request $request)
+    {
+        $this->validate($request,[
+            
+            'title'=>'required',
+            'description'=>'required',
+           
+        ]);
+    
+        
+
+        $whychooseus = new whychooseus;
+        $whychooseus->title = $request->input('title');
+        $whychooseus->description = $request->input('description');
+        $whychooseus->save();
+        
+       
+        
+
+        return Redirect::back() ;
+    }
+
 
     /**
      * Display the specified resource.
