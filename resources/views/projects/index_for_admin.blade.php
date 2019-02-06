@@ -68,7 +68,7 @@
 			</div>
 
 			<main class="main-content">
-				<div class="fullwidth-block">
+				{{-- <div class="fullwidth-block">
 					<div class="container">
 						<h2 class="section-title">A laboratory is a facility that provides controlled conditions</h2>
 						<p>
@@ -77,7 +77,7 @@
 
 						<p>perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
 					</div>
-				</div>
+				</div> --}}
 
 				<div class="fullwidth-block">
 					<div class="container">
@@ -86,12 +86,22 @@
 							
                             @if(count($projects) > 0)
                             @foreach($projects as $project)
-                            <div class="project">
+                            {{-- <div class="project">
 								<div class="project-content">
 									<figure class="project-image"><img src="images/news_1.jpg" alt="Project"></figure> 
                                     <h2><a href="/projects/{{$project->Project_ID}}">  {{$project->Project_Title}}</a></h2>
 								</div>
-                            </div>
+							</div> --}}
+							
+							<div class="fullwidth-block">
+									<div class="container">
+										<h2 class="section-title"><a href="/projects/{{$project->Project_ID}}">{{$project->Project_Title}}</a></h2>
+									<p> {{$project->Project_details}}</p> 
+				
+										{{-- <p>perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p> --}}
+									</div>
+								</div>
+
                             @endforeach
                             @else 
                                     <p>No projects found!</p>

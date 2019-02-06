@@ -118,10 +118,10 @@
 								
 							<div class="col-md-3 col-sm-6">
 								<div class="feature">
-									<img src="images/icon-research-small.png" alt="" class="feature-image">
+									{{-- <img src="images/icon-research-small.png" alt="" class="feature-image"> --}}
 									<h2 class="feature-title"><a href="/projects/{{$project->Project_ID}}">{{$project->Project_Title}}</a></h2>
 									<p>“We hope the nanofabrication community will be excited about the release of this software</p>
-									<a href="" class="button">Learn more</a>
+									<a href="/projects" class="button">Learn more</a>
 								</div>
 							</div>
 							@endforeach
