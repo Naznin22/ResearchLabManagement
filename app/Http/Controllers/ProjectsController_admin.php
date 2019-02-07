@@ -17,16 +17,17 @@ class ProjectsController_admin extends Controller
      */
     public function index(Request $request)
     {
-         $s = $request->input('s');
+        //  $s = $request->input('s');
         // $projects = Project::distinct('Project_ID')->get();
-       
-        $projects = Project::latest()
-            ->search($s)
+       $profiles = Profile::all();
+        // $projects = Project::latest()
+            // ->search($s)
             // ->distinct()->get()
-              ->paginate(20);
+            //   ->paginate(20);
              
         // return view('projects.index_for_admin')->with('projects', $projects);
-         return view('projects.index_for_admin' , compact('projects', 's'));
+        //  return view('projects.index_for_admin' , compact('projects', 's', 'profiles'));
+        // return view('adminPanel' , compact('profiles'));
     }
 
     /**
@@ -211,6 +212,15 @@ class ProjectsController_admin extends Controller
         $project->push();
 
         return redirect('/adminPanelUser')->with('success','project updated');
+    }
+
+
+    public function editprofile(Request $request, $id)
+    {
+       
+        
+
+        
     }
 
     /**

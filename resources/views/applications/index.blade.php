@@ -120,7 +120,7 @@
 														<th> {{$application->subject}}</th>
 														<th> {{$application->body}}</th>
 														<th> {{$application->file}}</th>
-														<th><embed width="250px" height="250px" src="/storage/file/{{$application->file}}" </th> 
+														<th><embed width="250px" height="250px" src="/storage/file/{{$application->file}}"> </th> 
 														
 
                                                        

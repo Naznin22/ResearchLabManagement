@@ -3,24 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Project;
 use App\Profile;
-use App\Selected;
 
-class UsersController extends Controller
+class profilesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        // $users = User::all();
-        // $profiles = Profile::all();
-        // // $userid = User::find(1);
-        // return view('adminPanel',compact(['users', 'profiles']));
+        //
     }
 
     /**
@@ -41,16 +35,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-       
-        $users = User::all();
-        $projects = Project::all();
-        $profiles = Profile::all();
-        // return view('admin')->with('resource',$resource);
-
-        $countUser =  User::count();
-        $count = Project::count();
-        $selected = Selected::count();
-       return view('adminPanel', compact(['projects','users','countUser','count','selected','profiles']));
+        //
     }
 
     /**
@@ -72,7 +57,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $profile = Profile::find($id);
+        return view('editprofiles.edit',compact('profile','id'));
     }
 
     /**
@@ -84,7 +70,26 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $this->validate($request,[
+            // 'id' => 'required',
+         ]);
+     
+ 
+         $profile = Profile::find($id);
+        //  $profile->id = $request->input('id');
+         // $profiles->name = $request->input('name');
+         $profile->date_of_birth = $request->input('date_of_birth');
+         $profile->phone_number = $request->input('phone_number');
+         $profile->website = $request->input('website');
+         $profile->address = $request->input('address');
+         $profile->education = $request->input('education');
+         $profile->profession = $request->input('profession');
+         $profile->personal_experience= $request->input('personal_experience');
+         
+         // $profile->file = $fileNameToStore;
+         $profile->save();
+         return redirect('/adminPanelUser');
     }
 
     /**

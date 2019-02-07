@@ -72,6 +72,7 @@ Route::get('/mail', function () {
 Route::resource('resource','resourceController');
 Route::resource('members','membersController');
 Route::resource('projects','ProjectsController_admin');
+// Route::resource('editprofiles','ProjectsController_admin');
 Route::resource('applications','ApplicationsController');
 Route::resource('selecteds','selectedsController');
 
@@ -143,6 +144,13 @@ Route::group(['middleware' => ['web','auth']],function(){
 Route::post('apply','pagesController@postContact');
 Route::post('whychoose','ProjectsController_admin@storeWhychoose');
 Route::post('addprofile','ProjectsController_admin@storeProfiles');
+// Route::post('editprofiles','ProjectsController_admin@editprofile');
+ Route::resource('editprofiles','profilesController');
+
+
+// Route::get('/editprofiles/{id}/edit/',function(){
+//     return view('editprofiles.edit');
+// });
 
 //Route::get('/apply','pagesController@postContact');
 

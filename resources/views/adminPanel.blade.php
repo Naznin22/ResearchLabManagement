@@ -250,6 +250,9 @@
                 <!-- /.row -->
                 <!-- row -->
 
+                
+
+
                  <!-- /row -->
                  <div class="row">
                         <div class="col-sm-12">
@@ -451,6 +454,56 @@
                             {!! Form::close() !!}
     
                             </div>
+                        </div>
+
+
+                        <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="white-box">
+                                        <h3 class="box-title">Profiles</h3>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        
+                                                        <th>Id</th>
+                                                        <th>Name</th>
+                                                        <th>Date of birth</th>
+                                                        <th>Phone number</th>
+                                                        <th>Website</th>
+                                                        <th>Address</th>
+                                                        <th>Education</th>
+                                                        <th>Profession</th>
+                                                        <th>Personal Experience</th>
+                                                        <th>Profile Photo</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                        @foreach($profiles as $profile)
+                                                        <tr>
+                                                                <th>{{$profile->id}}</th>
+                                                                <th>{{$profile->user->name}}</th>
+                                                                <th>{{$profile->date_of_birth}}</th>
+                                                                <th>{{$profile->phone_number}}</th>
+                                                                <th>{{$profile->website}}</th>
+                                                                <th>{{$profile->address}}</th>
+                                                                <th>{{$profile->education}}</th>
+                                                                <th>{{$profile->profession}}</th>
+                                                                <th>{{$profile->personal_experience}}</th>
+                                                                <th><embed width="200px" height="250px" src="/storage/file/{{$profile->file}}"> </th>
+                                                                <th> <a href="/editprofiles/{{$profile->id}}/edit/" class="btn btn-success">Edit</a> </th>
+                                                            
+                                                        </tr>
+                                                        @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
 
 {{-- <div class="row">
