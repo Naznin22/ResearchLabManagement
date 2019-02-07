@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Project;
+use App\Profile;
 use App\whychooseus;
+use User;
 
 class ProjectsController extends Controller
 {
@@ -16,13 +18,15 @@ class ProjectsController extends Controller
      */
     public function index(Request $request)
     {
+        
         $s = $request->input('s');
         $whychooseuses= whychooseus::all();
+        $profiles= Profile::all();
         $projects = Project::where('public',1)
             ->search($s)
              ->paginate(20);
         // return view('projects.index')->with('projects', $projects);
-        return view('welcome' , compact('projects', 's','whychooseuses'));
+        return view('welcome' , compact('projects', 's','whychooseuses','profiles'));
     }
 
     /**

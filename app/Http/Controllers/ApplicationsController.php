@@ -42,7 +42,7 @@ class ApplicationsController extends Controller
             'email'=>'required',
             'subject'=>'required',
             'body'=>'required',
-            'file'=>'required|file|mimes:jpg,jpeg,png,doc,pdf,svg,gif|max:2048'
+            'file'=>'required|file|mimes:jpg,jpeg,png,doc,pdf,svg,gif|max:10000'
         ]);
 
         //handle upload

@@ -142,7 +142,7 @@ Route::group(['middleware' => ['web','auth']],function(){
 // Route::post('contactTest','pagesController@postContact');
 Route::post('apply','pagesController@postContact');
 Route::post('whychoose','ProjectsController_admin@storeWhychoose');
-// Route::get('welcome','whychooseusController@index');
+Route::post('addprofile','ProjectsController_admin@storeProfiles');
 
 //Route::get('/apply','pagesController@postContact');
 

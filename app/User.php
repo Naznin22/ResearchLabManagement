@@ -39,4 +39,10 @@ public function applications()
     }
 
 
+public function profile()
+{
+    return $this->belongsTo('App\Profile','id');
+}
+
+
 }

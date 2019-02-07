@@ -389,6 +389,70 @@
                                 </div>
                             </div>
 
+
+            <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">                        
+                            <div class = "container">
+                            <a id="add"> <h3>Add Profiles</h3></a>
+                            </div>
+                            <div class = "container">
+
+                            {!! Form::open(['url' => '/addprofile', 'enctype' => 'multipart/form-data']) !!}
+                            <div class = "form-group" class="col-sm-1">
+                                {{Form::label('id','Id')}}
+                                {{Form::text('id','',['class' => 'form-control', 'placeholder' => 'Id'] )}}
+                            </div>
+            
+                            {{-- <div class = "form-group" class="col-sm-2">
+                                    {{Form::label('name','Name')}}
+                                    {{Form::text('name','',['class' => 'form-control', 'placeholder' => 'name'] )}}
+                                </div> --}}
+            
+                            <div class = "form-group" class="col-sm-2">
+                                    {{Form::label('date_of_birth','Date_of_birth')}}
+                                    {{Form::text('date_of_birth','',['class' => 'form-control', 'placeholder' => 'date_of_birth'] )}}
+                                </div>
+                                <div class = "form-group" class="col-sm-2">
+                                        {{Form::label('phone_number','Phone_number')}}
+                                        {{Form::text('phone_number','',['class' => 'form-control', 'placeholder' => 'phone_number'] )}}
+                                    </div>
+                
+                        
+                                    <div class = "form-group" class="col-sm-2">
+                                            {{Form::label('website','Website')}}
+                                            {{Form::text('website','',['class' => 'form-control', 'placeholder' => 'website'] )}}
+                                        </div>
+                    
+                                    <div class = "form-group" class="col-sm-2">
+                                            {{Form::label('address','Address')}}
+                                            {{Form::text('address','',['class' => 'form-control', 'placeholder' => 'address'] )}}
+                                        </div>
+                                        <div class = "form-group" class="col-sm-2">
+                                                {{Form::label('education','Education')}}
+                                                {{Form::text('education','',['class' => 'form-control', 'placeholder' => 'education'] )}}
+                                            </div>
+                                            <div class = "form-group" class="col-sm-2">
+                                                    {{Form::label('profession','Profession')}}
+                                                    {{Form::text('profession','',['class' => 'form-control', 'placeholder' => 'profession'] )}}
+                                                </div>
+                                                <div class = "form-group" class="col-sm-2">
+                                                        {{Form::label('personal_experience','Personal_experience')}}
+                                                        {{Form::text('personal_experience','',['class' => 'form-control', 'placeholder' => 'personal_experience'] )}}
+                                                    </div>
+                                                    <div class="form-group">
+                                                            {{ Form:: file('file')}}
+                                                            </div>
+                                
+                                
+            
+                                    {{Form::submit('Submit',['class' => 'btn'])}}
+                                
+                            {!! Form::close() !!}
+    
+                            </div>
+                        </div>
+
 {{-- <div class="row">
         <div class="white-box">
             <h3>Add Members</h3>

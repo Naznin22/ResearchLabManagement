@@ -106,7 +106,7 @@
 				<div class="fullwidth-block">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-8">
 								<h2 class="section-title">Why choose us?</h2>
 								<ol class="circle">
 								@if(count($whychooseuses) > 0 )
@@ -125,9 +125,10 @@
                             @endif
 								
 							</div>
-							<div class="col-md-4">
-								<h2 class="section-title">Usefull links</h2>
-								{{-- <p>Nemo mollitia iste quis sed iure tempora dolore incidunt praesentium aspernatur! Praesentium impedit aperiam, commodi magnam accusamus nobis. Quia, velit sunt asperiores?</p> --}}
+
+							 <div class="col-md-4">
+								{{--<h2 class="section-title">Usefull links</h2>
+								{{-- <p>Nemo mollitia iste quis sed iure tempora dolore incidunt praesentium aspernatur! Praesentium impedit aperiam, commodi magnam accusamus nobis. Quia, velit sunt asperiores?</p> 
 								<ul class="arrow-list has-border">
 									<li>https://github.com/usnistgov/NEMO </li>
 									<li>https://github.com/usnistgov/NEMO </li>
@@ -140,7 +141,7 @@
 									<li>https://github.com/usnistgov/NEMO </li>
 
 								
-								</ul>
+								</ul> --}}
 							</div>
 							<div class="col-md-4">
 								<h2 class="section-title">Testimonials</h2>
@@ -173,58 +174,49 @@
 					<div class="container">
 						<h2 class="section-title">Our team</h2>
 						<div class="row">
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/person-1.jpg" alt="" class="team-image">
-									<h3 class="team-name">Howard Hanson</h3>
-									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
-									<div class="social-links">
-										<a href=""><i class="fa fa-facebook"></i></a>
-										<a href=""><i class="fa fa-twitter"></i></a>
-										<a href=""><i class="fa fa-google-plus"></i></a>
-										<a href=""><i class="fa fa-pinterest"></i></a>
+
+								@if(count($profiles) > 0 )
+								@foreach($profiles as $profile)
+								
+								<div class="col-md-3">
+										<div class="team">
+											<img src="/storage/file/{{$profile->file}}" alt="" class="team-image">
+											{{-- <img src="images/person-1.jpg" alt="" class="team-image"> --}}
+											{{-- <h3 class="team-name">{{$profile->user->name}}</h3> --}}
+											<h2><a href="/profile">{{$profile->user->name}} </a></h2>
+											<h1>{{ $profile->profession}}</h1>
+											{{-- <div class="social-links">
+												<a href=""><i class="fa fa-facebook"></i></a>
+												<a href=""><i class="fa fa-twitter"></i></a>
+												<a href=""><i class="fa fa-google-plus"></i></a>
+												<a href=""><i class="fa fa-pinterest"></i></a>
+											</div> --}}
+										</div>
 									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/person-2.jpg" alt="" class="team-image">
-									<h3 class="team-name">Jannet Smith</h3>
-									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
-									<div class="social-links">
-										<a href=""><i class="fa fa-facebook"></i></a>
-										<a href=""><i class="fa fa-twitter"></i></a>
-										<a href=""><i class="fa fa-google-plus"></i></a>
-										<a href=""><i class="fa fa-pinterest"></i></a>
+										
+									
+							@endforeach
+						</ol>
+                            @else 
+                                    <p>No projects found!</p>
+                            @endif
+
+							{{-- <div class="col-md-3">
+									<div class="team">
+										<img src="images/person-1.jpg" alt="" class="team-image">
+										<h3 class="team-name">Howard Hanson</h3>
+										<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
+										<div class="social-links">
+											<a href=""><i class="fa fa-facebook"></i></a>
+											<a href=""><i class="fa fa-twitter"></i></a>
+											<a href=""><i class="fa fa-google-plus"></i></a>
+											<a href=""><i class="fa fa-pinterest"></i></a>
+										</div>
 									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/person-3.jpg" alt="" class="team-image">
-									<h3 class="team-name">Paul Newman</h3>
-									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
-									<div class="social-links">
-										<a href=""><i class="fa fa-facebook"></i></a>
-										<a href=""><i class="fa fa-twitter"></i></a>
-										<a href=""><i class="fa fa-google-plus"></i></a>
-										<a href=""><i class="fa fa-pinterest"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="team">
-									<img src="images/person-4.jpg" alt="" class="team-image">
-									<h3 class="team-name">Sarah Dowson</h3>
-									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
-									<div class="social-links">
-										<a href=""><i class="fa fa-facebook"></i></a>
-										<a href=""><i class="fa fa-twitter"></i></a>
-										<a href=""><i class="fa fa-google-plus"></i></a>
-										<a href=""><i class="fa fa-pinterest"></i></a>
-									</div>
-								</div>
-							</div>
+								</div> --}}
+							
+							
+							
 						</div> <!-- .row -->
 					</div> <!-- .container -->
 				</div>
