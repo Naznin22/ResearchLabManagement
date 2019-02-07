@@ -24,7 +24,8 @@ class pagesController extends Controller
          }
 
     public function mainhome_for_user(){
-            return view('pages.mainhome_for_user');
+            // return view('pages.mainhome_for_user');
+            return view('about');
          }
 
          public function postContact(Request $request){

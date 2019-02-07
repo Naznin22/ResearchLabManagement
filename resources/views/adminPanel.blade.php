@@ -235,6 +235,7 @@
                                                             <th>{{$user->name}}</th>
                                                             <th>{{$user->email}}</th>
                                                             <th>{{$user->admin}}</th>
+                                                            <th> <a href="/users/{{$user->id}}/edit/" class="btn btn-success">Edit</a> </th>
                                                             
                                                         </tr>
                                                         @endforeach

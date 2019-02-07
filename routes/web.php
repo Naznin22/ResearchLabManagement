@@ -2,7 +2,7 @@
 
 use App\Notifications\selectionDone;
 use App\Selected;
-
+// use App\Redirect;
 
 
 
@@ -57,6 +57,8 @@ Route::get('/news',function(){
     return view('news');
 });
 
+
+
 // Route::get('/random','ProjectsController@index');
 
 Route::get('/mail', function () {
@@ -100,8 +102,15 @@ Route::get('create','selectedsController@create');
 
 
 //Route::get('/mainhome','pagesController@mainhome');
+
+//may need to uncomment
 Route::get('/mainhome_for_admin','pagesController@mainhome_for_admin');
 Route::get('/mainhome_for_user','pagesController@mainhome_for_user');
+// Route::get('/mainhome_for_user', function () {
+//                 return view('welcome');
+//             });
+
+
 Route::get('/','ProjectsController@index');
 // Route::get('/mainhome_for_user','ProjectsController@index');
 
@@ -123,18 +132,26 @@ Route::group(['middleware' => ['web','auth']],function(){
         if(Auth::user()->admin == 0 ){
 
             return view('home');
+            // return view('welcome');
         }else{
-            $users['users'] = \App\User::all();
-            return view('adminhome', $users);
+            // $users['users'] = \App\User::all();
+            // return view('adminhome', $users);
+            return view('adminhome');
         }
     });
 
     Route::get('/mainhome',function(){
         if(Auth::user()->admin == 0 ){
-            return view('pages.mainhome_for_user');
+            // return redirect()->back()->back();            
+            // return view('pages.mainhome_for_user');
+            return redirect('/');
+            // return view('welcome');
         }else{
-            $users['users'] = \App\User::all();
-            return view('adminPanel');
+            // $users['users'] = \App\User::all();
+            // return view('adminPanel');
+
+            // return view('adminPanel');
+            return redirect('/adminPanelUser');
         }
     });
 
@@ -146,7 +163,7 @@ Route::post('whychoose','ProjectsController_admin@storeWhychoose');
 Route::post('addprofile','ProjectsController_admin@storeProfiles');
 // Route::post('editprofiles','ProjectsController_admin@editprofile');
  Route::resource('editprofiles','profilesController');
-
+ Route::resource('users','UsersController');
 
 // Route::get('/editprofiles/{id}/edit/',function(){
 //     return view('editprofiles.edit');
