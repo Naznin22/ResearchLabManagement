@@ -57,28 +57,45 @@
 				</div>
 			</header>
 
-			<div class="page-head" style=background:url(images/page-head-3.jpg)>
-				<div class="container">
-					<h2 class="page-title">Contact</h2>
-<small>This is where you contact</small>				</div>
-			</div>
+			
+			
 
 			<main class="main-content">
-				
+
+                    <div class="fullwidth-block">
+                        	<div class="container">
+                              <div  data-latitude="-6.897789" data-longitude="107.621735"></div>
+                                <div class="col-md-4">
+                                    <div class="boxed-content">
+                                        <h1 class="section-title"> {{$profile->user->name}} </h1>
+                                        <h2> {{$profile->profession}} </h2>
+                                        <address>
+                                                <h2>Contact Information </h2>
+                                        <p>{{$profile->address}}</p>
+                                        <p>Phone: {{$profile->phone_number}} </p>
+                                        <p>Email: {{$profile->user->email}} </p><br><br>
+                                        <h2>Education</h2>
+                                        <p>
+                                            @foreach ($profile->educations as $education)
+                                                <ul>
+                                                    <li> {{$education->education}}  </li>
+                                                </ul>
+                                            @endforeach
+                                        </p><br><br>
+                                        <h2>Research Interests</h2>
+                                        <p> {{$profile->personal_experience}} </p>
+                                    </address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
 				<div class="fullwidth-block">
 					<div class="container">
 						 <div class="map" data-latitude="-6.897789" data-longitude="107.621735"></div>
 
-						 <div class="row">
-						 	<div class="col-md-4">
-						 		<div class="boxed-content">
-						 			<h2 class="section-title">Address</h2>
-						 			<address>
-						 				<p>Company Name INC.</p>
-										<p>423 Avenue Street, Chicago, IL 60610</p>
-									</address>
-						 		</div>
-						 	</div>
+						 
 						 	<div class="col-md-4">
 						 		<div class="boxed-content">
 						 			<h2 class="section-title">Telephone</h2>

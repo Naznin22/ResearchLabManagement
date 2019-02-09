@@ -15,4 +15,15 @@ class Profile extends Model
     {
         return $this->hasOne('App\User','id');
     }
+
+    public function member()
+    {
+        return $this->belongsTo('App\Member');
+    }
+
+    public function educations()
+    {
+        return $this->hasMany('App\Education','id');
+    }
+
 }

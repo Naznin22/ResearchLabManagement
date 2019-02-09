@@ -41,15 +41,16 @@ class membersController extends Controller
     {
         $this->validate($request,[
             'id'=>'required',
-            
+            'project_id'=>'required',
             'members'=>'required'
         ]);
     
         //create selected
         
         $member = new Member;
-        $member->Project_ID = $request->input('id');
+        $member->Project_ID = $request->input('project_id');
         $member->project_members = $request->input('members');
+        $member->id = $request->input('id');
         $member->save();
 
         return redirect('/adminPanelUser');

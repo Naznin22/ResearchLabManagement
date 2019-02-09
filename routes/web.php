@@ -33,7 +33,7 @@ Route::get('/contactTest',function(){
     return view('pages.contactTest');
 });
 Route::get('/contact',function(){
-    return view('contact.create');
+    return view('contact');
 });
 Route::get('/services',function(){
     return view('services');
@@ -50,9 +50,13 @@ Route::get('/adminPanel',function(){
 Route::get('/indexTest',function(){
     return view('projects.indexTest');
 });
-Route::get('/profile',function(){
-    return view('projects.profile');
-});
+// Route::get('/profile',function(){
+//     return view('profiles.profile');
+// });
+
+Route::get('/profiles/{id}/','profilesController@show');
+Route::resource('profiles','profilesController');
+
 Route::get('/news',function(){
     return view('news');
 });
@@ -77,6 +81,7 @@ Route::resource('projects','ProjectsController_admin');
 // Route::resource('editprofiles','ProjectsController_admin');
 Route::resource('applications','ApplicationsController');
 Route::resource('selecteds','selectedsController');
+Route::resource('profiles','profilesController');
 
 // Route::get('/projects/{id}/edit/','ProjectsController_admin@edit');
 // Route::post('/projects/update/{id}/','ProjectsController_admin@update')->name('update');
@@ -84,8 +89,8 @@ Route::resource('selecteds','selectedsController');
 // Route::get('/index_for_admin', function () {
 //     return view('projects.index_for_admin');
 // });
-Route::get('contact', 'ContactController@create')->name('contact.create');
-Route::post('contact', 'ContactController@store')->name('contact.store');
+// Route::get('contact', 'ContactController@create')->name('contact.create');
+// Route::post('contact', 'ContactController@store')->name('contact.store');
 Route::get('resource','resourceController@index');
 ;
 // Route::get('adminPanelUser','UsersController@index');
@@ -164,6 +169,7 @@ Route::post('addprofile','ProjectsController_admin@storeProfiles');
 // Route::post('editprofiles','ProjectsController_admin@editprofile');
  Route::resource('editprofiles','profilesController');
  Route::resource('users','UsersController');
+ Route::resource('educations','educationsController');
 
 // Route::get('/editprofiles/{id}/edit/',function(){
 //     return view('editprofiles.edit');

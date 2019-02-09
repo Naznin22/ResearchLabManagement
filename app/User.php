@@ -44,5 +44,10 @@ public function profile()
     return $this->belongsTo('App\Profile','id');
 }
 
+public function member()
+{
+    return $this->belongsTo('App\Member','id');
+}
+
 
 }

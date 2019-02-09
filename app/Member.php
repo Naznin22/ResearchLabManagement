@@ -9,7 +9,7 @@ class Member extends Model
     //table name
     protected $table = 'members';
     //primary key
-    //public $primaryKey = 'Project_ID';
+    //public $primaryKey = 'id';
     //timestamps
     public $timestamps = true;
 
@@ -17,4 +17,15 @@ class Member extends Model
     {
         return $this->belongsTo('App\Project');
     }
+
+    public function user()
+    {
+        return $this->hasOne('App\User','id');
+    }
+
+    public function profile()
+    {
+        return $this->hasOne('App\Profile','id');
+    }
+
 }

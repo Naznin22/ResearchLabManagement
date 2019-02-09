@@ -178,6 +178,29 @@
         
                                 </div>
                             </div>
+
+
+                            <div class="row">
+                                    <div class="white-box">
+                                        <h3>Add Educations</h3>
+                                                    <div class="container">
+                                                    {!! Form::open(['action' => 'educationsController@store', 'method' ]) !!}
+                            
+                                                    <div class = "form-group" class="col-sm-1">
+                                                            {{Form::label('id','Profile Id')}}
+                                                            {{Form::text('id','',['class' => 'form-control', 'placeholder' => 'profile Id'] )}}
+                                                        </div>
+                                                        <div class = "form-group" class="col-sm-2">
+                                                            {{Form::label('educations','Educations')}}
+                                                            {{Form::text('educations','',['class' => 'form-control', 'placeholder' => 'Educations'] )}}
+                                                        </div>
+                            
+                                                        
+                                                         {{Form::submit('Submit',['class' => 'btn'])}}
+                                                    {!! Form::close() !!}
+                                                    </div>
+                                 </div>
+                            </div>
     
        
                

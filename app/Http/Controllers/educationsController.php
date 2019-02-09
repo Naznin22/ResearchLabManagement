@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Profile;
+use App\Education;
 
-class profilesController extends Controller
+class educationsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class profilesController extends Controller
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -35,7 +35,20 @@ class profilesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'id'=>'required'
+            
+        ]);
+    
+        //create selected
+        
+        $education = new Education;
+        $education->id = $request->input('id');
+        $education->education = $request->input('educations');
+        
+        $education->save();
+
+        return redirect('/adminPanelUser');
     }
 
     /**
@@ -46,8 +59,7 @@ class profilesController extends Controller
      */
     public function show($id)
     {
-        $profile = Profile::find($id);
-        return view('profiles.profile')->with('profile',$profile);
+        //
     }
 
     /**
@@ -58,8 +70,7 @@ class profilesController extends Controller
      */
     public function edit($id)
     {
-        $profile = Profile::find($id);
-        return view('editprofiles.edit',compact('profile','id'));
+        //
     }
 
     /**
@@ -71,26 +82,7 @@ class profilesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-        $this->validate($request,[
-            // 'id' => 'required',
-         ]);
-     
- 
-         $profile = Profile::find($id);
-        //  $profile->id = $request->input('id');
-         // $profiles->name = $request->input('name');
-         $profile->date_of_birth = $request->input('date_of_birth');
-         $profile->phone_number = $request->input('phone_number');
-         $profile->website = $request->input('website');
-         $profile->address = $request->input('address');
-         $profile->education = $request->input('education');
-         $profile->profession = $request->input('profession');
-         $profile->personal_experience= $request->input('personal_experience');
-         
-         // $profile->file = $fileNameToStore;
-         $profile->save();
-         return redirect('/adminPanelUser');
+        //
     }
 
     /**

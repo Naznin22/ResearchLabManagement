@@ -162,25 +162,7 @@
                 {!! Form::close() !!}
 
 
-<div class="row">
-        <div class="white-box">
-            <h3>Add Members</h3>
-                        <div class="container">
-                        {!! Form::open(['action' => 'membersController@store', 'method' ]) !!}
 
-                        <div class = "form-group" class="col-sm-1">
-                                {{Form::label('id','Id')}}
-                                {{Form::text('id','',['class' => 'form-control', 'placeholder' => 'This Project Id'] )}}
-                            </div>
-                            <div class = "form-group" class="col-sm-2">
-                                {{Form::label('members','Members')}}
-                                {{Form::text('members','',['class' => 'form-control', 'placeholder' => 'Members'] )}}
-                            </div>
-                             {{Form::submit('Submit',['class' => 'btn'])}}
-                        {!! Form::close() !!}
-                        </div>
-     </div>
-</div>
     
        
                

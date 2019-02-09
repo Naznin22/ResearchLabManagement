@@ -17,16 +17,16 @@ class ProjectsController_admin extends Controller
      */
     public function index(Request $request)
     {
-        //  $s = $request->input('s');
+         $s = $request->input('s');
         // $projects = Project::distinct('Project_ID')->get();
-       $profiles = Profile::all();
-        // $projects = Project::latest()
-            // ->search($s)
+      
+        $projects = Project::latest()
+            ->search($s)
             // ->distinct()->get()
-            //   ->paginate(20);
+              ->paginate(20);
              
         // return view('projects.index_for_admin')->with('projects', $projects);
-        //  return view('projects.index_for_admin' , compact('projects', 's', 'profiles'));
+         return view('projects.index_for_admin' , compact('projects', 's'));
         // return view('adminPanel' , compact('profiles'));
     }
 
@@ -103,7 +103,7 @@ class ProjectsController_admin extends Controller
     public function storeProfiles(Request $request)
     {
         $this->validate($request,[
-            
+            'id' => 'required',
             'file'=>'required|file|mimes:jpg,jpeg,png,doc,pdf,svg,gif|max:10000'
         ]);
     
@@ -133,7 +133,7 @@ class ProjectsController_admin extends Controller
         $profile->phone_number = $request->input('phone_number');
         $profile->website = $request->input('website');
         $profile->address = $request->input('address');
-        $profile->education = $request->input('education');
+        // $profile->education = $request->input('education');
         $profile->profession = $request->input('profession');
         $profile->personal_experience= $request->input('personal_experience');
         

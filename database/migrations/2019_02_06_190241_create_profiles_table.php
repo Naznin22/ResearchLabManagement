@@ -21,7 +21,7 @@ class CreateProfilesTable extends Migration
             $table->string('file');
             $table->string('website');
             $table->longText('address');
-            $table->longText('education');
+            // $table->longText('education');
             $table->longText('profession');
             $table->longText('personal_experience');
             $table->timestamps();

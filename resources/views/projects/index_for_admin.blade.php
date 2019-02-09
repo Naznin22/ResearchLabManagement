@@ -41,7 +41,7 @@
 						<nav class="main-navigation">
 							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 							<ul class="menu">
-								<li class="menu-item"><a href="/mainhome_for_user"><img src="images/home-icon.png" alt="Home"></a></li>
+								<li class="menu-item"><a href="/mainhome"><img src="images/home-icon.png" alt="Home"></a></li>
 								<li class="menu-item"><a href="about">About</a></li>
 								<li class="menu-item"><a href="services">Services</a></li>
 								<li class="menu-item current-menu-item"><a href="projects">Our projects</a></li>
@@ -93,11 +93,21 @@
 								</div>
 							</div> --}}
 							
-							<div class="fullwidth-block">
+							<div class="fullwidth-block" id="{{$project->Project_ID}}">
 									<div class="container">
 										<h2 class="section-title"><a href="/projects/{{$project->Project_ID}}">{{$project->Project_Title}}</a></h2>
-									<p> {{$project->Project_details}}</p> 
+
+										
+									<p style="Times New Roman", Times, serif;"> {{$project->Project_details}}</p> 
 				
+									@foreach ($project->members as $member)
+										<div class="col-md-3">
+											<div class="team">
+												<img src="/storage/file/{{$member->profile->file}}" alt="" class="team-image">
+												<h2> {{$member->project_members}} </h2>
+											</div>
+										</div>
+								@endforeach
 										{{-- <p>perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p> --}}
 									</div>
 								</div>

@@ -43,13 +43,12 @@
 						<nav class="main-navigation">
 							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 							<ul class="menu">
-                                    <li class="home menu-item"><a href="/mainhome_for_user"><img src="images/home-icon.png" alt="Home"></a></li>
-                                    <li class="menu-item"><a href="about">About</a></li>
-                                    <li class="menu-item"><a href="services">Services</a></li>
-									<li class="menu-item"><a href="indexTest">Our projects</a></li>
-									<li class="menu-item"><a href="apply">Apply</a></li>
-
-                                    <li class="menu-item current-menu-item"><a href="contact">Contact</a></li>
+									<li class="menu-item"><a href="/mainhome"><img src="images/home-icon.png" alt="Home"></a></li>
+									<li class="menu-item   current-menu-item"><a href="about">About</a></li>
+									<li class="menu-item"><a href="services">Services</a></li>
+									<li class="menu-item"><a href="projects">Our projects</a></li>
+									<li class="menu-item"><a href="/apply">Apply</a></li>
+									<li class="menu-item"><a href="contact">Contact</a></li>
 							</ul>
 						</nav>
 

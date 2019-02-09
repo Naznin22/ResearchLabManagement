@@ -285,7 +285,7 @@
                                                     <th>{{$project->Project_Title}}</th>
                                                     <th>{{$project->Project_details}}</th>
                                                     <th>@foreach ($project->members as $member)
-                                                    {{$member->project_members}}
+                                                    =>{{$member->project_members}}<br>
                                                         @endforeach
                                                     </th>
                                                     <th>{{$project->Budget}}</th>
@@ -357,6 +357,31 @@
                         {!! Form::close() !!}
 
                         </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="white-box">
+                                <h3>Add Members</h3>
+                                            <div class="container">
+                                            {!! Form::open(['action' => 'membersController@store', 'method' ]) !!}
+                    
+                                            <div class = "form-group" class="col-sm-1">
+                                                    {{Form::label('project_id','Project Id')}}
+                                                    {{Form::text('project_id','',['class' => 'form-control', 'placeholder' => 'This Project Id'] )}}
+                                                </div>
+                                                <div class = "form-group" class="col-sm-2">
+                                                    {{Form::label('members','Members')}}
+                                                    {{Form::text('members','',['class' => 'form-control', 'placeholder' => 'Members'] )}}
+                                                </div>
+                    
+                                                <div class = "form-group" class="col-sm-1">
+                                                        {{Form::label('id','User Id')}}
+                                                        {{Form::text('id','',['class' => 'form-control', 'placeholder' => 'User Id'] )}}
+                                                    </div>
+                                                 {{Form::submit('Submit',['class' => 'btn'])}}
+                                            {!! Form::close() !!}
+                                            </div>
+                         </div>
                     </div>
 
 
@@ -432,10 +457,10 @@
                                             {{Form::label('address','Address')}}
                                             {{Form::text('address','',['class' => 'form-control', 'placeholder' => 'address'] )}}
                                         </div>
-                                        <div class = "form-group" class="col-sm-2">
+                                        {{-- <div class = "form-group" class="col-sm-2">
                                                 {{Form::label('education','Education')}}
                                                 {{Form::text('education','',['class' => 'form-control', 'placeholder' => 'education'] )}}
-                                            </div>
+                                            </div> --}}
                                             <div class = "form-group" class="col-sm-2">
                                                     {{Form::label('profession','Profession')}}
                                                     {{Form::text('profession','',['class' => 'form-control', 'placeholder' => 'profession'] )}}
@@ -457,6 +482,8 @@
                             </div>
                         </div>
 
+
+                        
 
                         <div class="row">
                                 <div class="col-sm-12">
@@ -490,7 +517,13 @@
                                                                 <th>{{$profile->phone_number}}</th>
                                                                 <th>{{$profile->website}}</th>
                                                                 <th>{{$profile->address}}</th>
-                                                                <th>{{$profile->education}}</th>
+                                                                {{-- <th>{{$profile->education}}</th> --}}
+                                                                <th>@foreach ($profile->educations as $education)
+                                                                    {{$education->education}}<br><br>
+                                                                @endforeach
+                                                            </th>
+                                                                
+
                                                                 <th>{{$profile->profession}}</th>
                                                                 <th>{{$profile->personal_experience}}</th>
                                                                 <th><embed width="200px" height="250px" src="/storage/file/{{$profile->file}}"> </th>
@@ -505,6 +538,31 @@
                                 </div>
                             </div>
                             
+                        </div>
+
+
+                        <div class="row">
+                                <div class="col-sm-12">
+                                <div class="white-box">
+                                    <h3>Add Educations</h3>
+                                                <div class="container">
+                                                {!! Form::open(['action' => 'educationsController@store', 'method' ]) !!}
+                        
+                                                <div class = "form-group" class="col-sm-1">
+                                                        {{Form::label('id','Profile Id')}}
+                                                        {{Form::text('id','',['class' => 'form-control', 'placeholder' => 'profile Id'] )}}
+                                                    </div>
+                                                    <div class = "form-group" class="col-sm-2">
+                                                        {{Form::label('educations','Educations')}}
+                                                        {{Form::text('educations','',['class' => 'form-control', 'placeholder' => 'Educations'] )}}
+                                                    </div>
+                        
+                                                    
+                                                     {{Form::submit('Submit',['class' => 'btn'])}}
+                                                {!! Form::close() !!}
+                                                </div>
+                             </div>
+                        </div>
                         </div>
 
 {{-- <div class="row">

@@ -52,14 +52,12 @@
 						<nav class="main-navigation">
 							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 							<ul class="menu">
-								<li class="home menu-item current-menu-item"><a href="/mainhome_for_user"><img src="images/home-icon.png" alt="Home"></a></li>
-								<li class="menu-item"><a href="about">About</a></li>
-								<li class="menu-item"><a href="services">Services</a></li>
-								{{-- <li class="menu-item"><a href="projects">Our projects</a></li>
-								<li class="menu-item"><a href="/apply">Apply</a></li> --}}
-								
-								<li class="menu-item"><a href="contact">Contact</a></li>
-								<li class="menu-item">
+									<li class="menu-item  current-menu-item"><a href="/mainhome"><img src="images/home-icon.png" alt="Home"></a></li>
+									<li class="menu-item"><a href="about">About</a></li>
+									<li class="menu-item"><a href="services">Services</a></li>
+									<li class="menu-item"><a href="projects">Our projects</a></li>
+									<li class="menu-item"><a href="/apply">Apply</a></li>
+									<li class="menu-item"><a href="contact">Contact</a></li>
 								</ul>
 
 								<ul>
@@ -121,7 +119,7 @@
 							@endforeach
 						</ol>
                             @else 
-                                    <p>No projects found!</p>
+                                    <h2>Nothing found!</h2>
                             @endif
 								
 							</div>
@@ -183,7 +181,9 @@
 											<img src="/storage/file/{{$profile->file}}" alt="" class="team-image">
 											{{-- <img src="images/person-1.jpg" alt="" class="team-image"> --}}
 											{{-- <h3 class="team-name">{{$profile->user->name}}</h3> --}}
-											<h2><a href="/profile">{{$profile->user->name}} </a></h2>
+										<h2><a href="/profiles/{{$profile->id}}">{{$profile->user->name}} </a></h2>
+										{{-- <h2><a href="/profile">{{$profile->user->name}} </a></h2> --}}
+
 											<h1>{{ $profile->profession}}</h1>
 											{{-- <div class="social-links">
 												<a href=""><i class="fa fa-facebook"></i></a>
@@ -198,7 +198,7 @@
 							@endforeach
 						</ol>
                             @else 
-                                    <p>No projects found!</p>
+							<h2>Nothing found!</h2>
                             @endif
 
 							{{-- <div class="col-md-3">
@@ -237,10 +237,12 @@
 							<div class="col-md-3 col-sm-6">
 								<div class="feature">
 									{{-- <img src="images/icon-research-small.png" alt="" class="feature-image"> --}}
-									<h2 class="feature-title"><a href="/projects/{{$project->Project_ID}}">{{$project->Project_Title}}</a></h2>
+									<h2 class="feature-title">{{$project->Project_Title}}</h2>
 									{{-- <p>“We hope the nanofabrication community will be excited about the release of this software</p> --}}
 								<p>{{str_limit($project->Project_details,200)}}</p>
-									<a href="/projects" class="button">Learn more</a>
+									{{-- <a href="/projects" class="button">Learn more</a> --}}
+									<a href="/projects/#{{$project->Project_ID}}" class="button">Learn more</a> 
+									{{-- Yes! my idea worked !--}}
 								</div>
 							</div>
 							@endforeach
