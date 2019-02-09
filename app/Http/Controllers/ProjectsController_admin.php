@@ -73,7 +73,7 @@ class ProjectsController_admin extends Controller
 
        
 
-        return redirect('/adminPanelUser');
+        return redirect('/adminPanelUser/#projects');
     }
 
 
@@ -143,7 +143,7 @@ class ProjectsController_admin extends Controller
        
         
 
-        return Redirect::back() ;
+        return redirect('/adminPanelUser') ;
     }
 
 
@@ -231,6 +231,14 @@ class ProjectsController_admin extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project::find($id);
+        $project->delete();
+
+        return redirect('/adminPanelUser');
+    }
+
+    public function destroywhychooseus($id)
+    {
+       
     }
 }

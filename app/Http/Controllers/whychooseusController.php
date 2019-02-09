@@ -3,25 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Project;
-use App\Profile;
 use App\whychooseus;
-use App\Selected;
 
-class UsersController extends Controller
+class whychooseusController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        // $users = User::all();
-        // $profiles = Profile::all();
-        // // $userid = User::find(1);
-        // return view('adminPanel',compact(['users', 'profiles']));
+        //
     }
 
     /**
@@ -42,16 +35,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-       
-        $users = User::all();
-        $projects = Project::all();
-        $profiles = Profile::all();
-        // return view('admin')->with('resource',$resource);
-        $whychooseuses = whychooseus::all();
-        $countUser =  User::count();
-        $count = Project::count();
-        $selected = Selected::count();
-       return view('adminPanel', compact(['projects','users','countUser','count','selected','profiles','whychooseuses']));
+        //
     }
 
     /**
@@ -73,8 +57,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
-        return view('users.edit',compact('user','id'));
+        //
     }
 
     /**
@@ -86,19 +69,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request,[
-            'id' => 'required',
-         ]);
-     
- 
-         $user = User::find($id);
-         $user->id = $request->input('id');
-         $user->name = $request->input('name');
-         $user->email = $request->input('email');
-         $user->admin = $request->input('admin');
-        
-         $user->save();
-         return redirect('/adminPanelUser');
+        //
     }
 
     /**
@@ -109,6 +80,9 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $whychooseus = whychooseus::find($id);
+        $whychooseus->delete();
+
+        return redirect('/adminPanelUser');
     }
 }

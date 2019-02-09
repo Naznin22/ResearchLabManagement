@@ -165,16 +165,22 @@ Route::group(['middleware' => ['web','auth']],function(){
 // Route::post('contactTest','pagesController@postContact');
 Route::post('apply','pagesController@postContact');
 Route::post('whychoose','ProjectsController_admin@storeWhychoose');
+Route::post('destroywhychooseus/{id}/','ProjectsController_admin@destroywhychooseus');
 Route::post('addprofile','ProjectsController_admin@storeProfiles');
 // Route::post('editprofiles','ProjectsController_admin@editprofile');
  Route::resource('editprofiles','profilesController');
  Route::resource('users','UsersController');
  Route::resource('educations','educationsController');
+ Route::resource('whychooseus','whychooseusController');
 
 // Route::get('/editprofiles/{id}/edit/',function(){
 //     return view('editprofiles.edit');
 // });
 
+
 //Route::get('/apply','pagesController@postContact');
+// Route::get('/adminPanelUser/#users',function(){
+//         return view('adminPanel');
+// });
 
 

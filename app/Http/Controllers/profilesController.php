@@ -101,6 +101,9 @@ class profilesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $profile = Profile::find($id);
+        $profile->delete();
+
+        return redirect('/adminPanelUser');
     }
 }

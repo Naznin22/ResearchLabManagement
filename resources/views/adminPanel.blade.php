@@ -212,7 +212,7 @@
                                 <!-- /.col-lg-12 -->
                             </div>
                             <!-- /row -->
-                            <div class="row">
+                            <div class="row" id="users">
                                 <div class="col-sm-12">
                                     <div class="white-box">
                                         <h3 class="box-title">Users</h3>
@@ -255,7 +255,7 @@
 
 
                  <!-- /row -->
-                 <div class="row">
+                 <div class="row" id="projects">
                         <div class="col-sm-12">
                             <div class="white-box">
                                 <h3 class="box-title">Researches</h3>
@@ -292,6 +292,13 @@
                                                     <th>{{$project->Completion}}</th>
                                                     <th>{{$project->public}}</th>
                                                 <th> <a href="/projects/{{$project->Project_ID}}/edit" class="btn btn-success">Edit</a> </th>
+                                                <th>
+                                                        {!! Form::open(['action' => ['ProjectsController_admin@destroy',$project->Project_ID] , 'method'=>'POST', 'class'=> 'pull-right' ]) !!}
+                                                            {{Form::hidden('_method', 'DELETE')}}
+                                                        {{Form::submit('Delete',['class' => 'btn btn-danger'])}}
+                                
+                                                        {!! Form::close() !!}
+                                                </th>
                                                     
                                                 </tr>
                                                
@@ -389,7 +396,7 @@
                         <div class="col-sm-12">
                             <div class="white-box">                        
                                 <div class = "container">
-                                <a id="add"> <h3>Why Choose US</h3></a>
+                                <a id="add"> <h3>Add Why Choose US</h3></a>
                                 </div>
                                 <div class = "container">
 
@@ -417,6 +424,52 @@
         
                                 </div>
                             </div>
+
+
+                             <!-- /row -->
+                             <div class="row" id="users">
+                                    <div class="col-sm-12">
+                                        <div class="white-box">
+                                            <h3 class="box-title">Why choose us</h3>
+                                            {{-- <p class="text-muted">Add class <code>.table</code></p> --}}
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            
+                                                            <th>Title</th>
+                                                            <th>Description</th>
+                                                           
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            @foreach($whychooseuses as $whychooseus)
+                                                            <tr>
+                                                                <th>{{$whychooseus->title}}</th>
+                                                                <th>{{$whychooseus->description}}</th>
+                                                               
+                                                                <th>
+                                                                        {!! Form::open(['action' => ['whychooseusController@destroy',$whychooseus->id] , 'method'=>'POST', 'class'=> 'pull-right' ]) !!}
+                                                                            {{Form::hidden('_method', 'DELETE')}}
+                                                                        {{Form::submit('Delete',['class' => 'btn btn-danger'])}}
+                                                
+                                                                        {!! Form::close() !!}
+                                                                </th>
+                                                                
+                                                            </tr>
+                                                            @endforeach
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.container-fluid -->
+                    <!-- /.row -->
+                    <!-- row -->
+    
 
 
             <div class="row">
@@ -485,7 +538,7 @@
 
                         
 
-                        <div class="row">
+                        <div class="row" id="profiles">
                                 <div class="col-sm-12">
                                     <div class="white-box">
                                         <h3 class="box-title">Profiles</h3>
@@ -529,6 +582,13 @@
                                                                 <th><embed width="200px" height="250px" src="/storage/file/{{$profile->file}}"> </th>
                                                                 <th> <a href="/editprofiles/{{$profile->id}}/edit/" class="btn btn-success">Edit</a> </th>
                                                             
+                                                                <th>
+                                                                        {!! Form::open(['action' => ['profilesController@destroy',$profile->id] , 'method'=>'POST', 'class'=> 'pull-right' ]) !!}
+                                                                            {{Form::hidden('_method', 'DELETE')}}
+                                                                        {{Form::submit('Delete',['class' => 'btn btn-danger'])}}
+                                                
+                                                                        {!! Form::close() !!}
+                                                                </th>
                                                         </tr>
                                                         @endforeach
                                                 </tbody>
