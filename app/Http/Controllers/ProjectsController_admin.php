@@ -74,7 +74,7 @@ class ProjectsController_admin extends Controller
 
        
 
-        return redirect('/adminPanelUser/#projects');
+        return redirect('/adminPanelUser');
     }
 
 

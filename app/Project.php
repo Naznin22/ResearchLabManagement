@@ -13,6 +13,8 @@ class Project extends Model
     //timestamps
     public $timestamps = true;
 
+    protected $fillable = [ 'Budget', 'Completion', ];
+
     public function scopeSearch($query, $s){
         return $query->where('Project_Title','like','%' .$s. '%')
         ->orWhere('Project_details','like','%' .$s. '%');

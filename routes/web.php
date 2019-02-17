@@ -147,6 +147,14 @@ Route::group(['middleware' => ['web','auth']],function(){
         }
     });
 
+    // Route::get('/button',function(){
+    //     if(Auth::user()->admin == 1 ){
+
+    //         return redirect('/adminPanelUser');
+    //         // return view('welcome');
+    //     }
+    // });
+
     Route::get('/mainhome',function(){
         if(Auth::user()->admin == 0 ){
             // return redirect()->back()->back();            

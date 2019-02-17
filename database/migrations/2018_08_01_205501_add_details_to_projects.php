@@ -14,7 +14,7 @@ class AddDetailsToProjects extends Migration
     public function up()
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->longText('Project_details')->after('Project_Title');
+            $table->longText('Project_details')->nullable()->after('Project_Title');
         });
     }
 

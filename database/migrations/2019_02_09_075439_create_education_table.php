@@ -15,7 +15,7 @@ class CreateEducationTable extends Migration
     {
         Schema::create('educations', function (Blueprint $table) {
             $table->integer('id');
-            $table->longText('education');
+            $table->longText('education')->nullable();
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@ class CreateWhychooseusesTable extends Migration
         Schema::create('whychooseuses', function (Blueprint $table) {
             $table->increments('id');
             $table->longText('title');
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

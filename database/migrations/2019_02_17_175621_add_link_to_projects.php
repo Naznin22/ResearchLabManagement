@@ -14,7 +14,7 @@ class AddLinkToProjects extends Migration
     public function up()
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->string('link');
+            $table->string('link')->nullable();
         });
     }
 

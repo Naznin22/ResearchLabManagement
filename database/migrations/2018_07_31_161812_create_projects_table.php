@@ -17,9 +17,9 @@ class CreateProjectsTable extends Migration
             $table->increments('SL_No');
             $table->integer('Project_ID');
             $table->string('Project_Title');
-            $table->bigInteger('Budget');
-            $table->string('Completion');
-            $table->boolean('public')->default(0);
+            $table->bigInteger('Budget')->nullable();
+            $table->string('Completion')->nullable();
+            $table->boolean('public')->default(0)->nullable();
             $table->timestamps();
         });
     }

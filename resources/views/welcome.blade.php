@@ -435,7 +435,7 @@
 							@else
 								<li class="nav-item dropdown">
 									<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-										{{ Auth::user()->name }} <span class="caret"></span>
+										{{ Auth::user()->name}} <span class="caret"></span>
 									</a>
 		
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -451,9 +451,26 @@
 									</div>
 								</li>
 							@endguest
-								</ul>
+								</ul>	
+								
+							</div>
+							<div class="col-mid-3" >
+
+									{{-- @if( {{ Auth::user()->admin}} == 0 )
+									<a href="/adminPaneluser" class="btn btn-default" style="float: left;">Go to admin page</a> --}}
+								{{-- @endif --}}
+
+								{{-- {{ Auth::user()->admin}} --}}
+								<a href="/mainhome" class="btn btn-default" style="float: left;">Go to admin page</a> 
+
 							</div>
 						</div>
+
+						
+						
+								
+
+						
 						<div class="col-md-3">
 								<div class="widget">
 									<h3 class="widget-title">Our address</h3>
