@@ -39,10 +39,15 @@
     {{-- <div class="preloader">
         <div class="cssload-speeding-wheel"></div>
     </div> --}}
-    <div id="wrapper">
+    {{-- <div id="wrapper"> --}}
         <!-- Navigation -->
-
         
+                
+                    {{-- <a href="index.html" class="branding">
+        <img src="images/sust_logo.png" alt="" class="logo" style="height:70px; width:70px">
+                    </a> --}}
+
+        <div class="container">
         <nav class="navbar navbar-header " role="navigation">
                 <div class="container=fluid">
                     {{-- <div class="navbar-header"> --}}
@@ -52,6 +57,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button> --}}
+                        
                         <a class="navbar-brand"  style="color:#dadada" href="/mainhome">Research Lab Management</a>
                      </div> 
                     <div class="collapse navbar-collapse" id="navbar-collapse-main">
@@ -66,7 +72,7 @@
 								</li>
 							@else
 								<li class="nav-item dropdown">
-									<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+									<a id="navbarDropdown" style="color:#dadada" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 										{{ Auth::user()->name }} <span class="caret"></span>
 									</a>
 		
