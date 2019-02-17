@@ -58,7 +58,7 @@
                             <span class="icon-bar"></span>
                         </button> --}}
                         
-                        <a class="navbar-brand"  style="color:#dadada" href="/mainhome">Research Lab Management</a>
+                        <a class="navbar-brand"  style="color:#dadada" href="/">Research Lab Management</a>
                      </div> 
                     <div class="collapse navbar-collapse" id="navbar-collapse-main">
                         <ul class="nav navbar-nav navbar-right">
