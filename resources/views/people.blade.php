@@ -9,7 +9,11 @@
 
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<!-- Loading main css file -->
         {{-- <link rel="stylesheet" href="style.css"> --}}
@@ -42,9 +46,9 @@
 								<nav class="main-navigation">
 									<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 									<ul class="menu">
-											<li class="menu-item "><a href="/"><img src="images/home-icon.png" alt="Home"></a></li>
-											<li class="menu-item"><a href="people">People</a></li>
-											<li class="menu-item  current-menu-item"><a href="projects">Our projects</a></li>
+											<li class="menu-item"><a href="/"><img src="images/home-icon.png" alt="Home"></a></li>
+											<li class="menu-item current-menu-item"><a href="people">People</a></li>
+											<li class="menu-item"><a href="projects">Our projects</a></li>
 											<li class="menu-item"><a href="/apply">Apply</a></li>
 											{{-- <li class="menu-item"><a href="about">About</a></li> --}}
 											<li class="menu-item"><a href="services">Services</a></li>
@@ -57,79 +61,70 @@
 				</div>
 			</header>
 
-			<div class="page-head" style=background:url(images/page-head-3.jpg)>
+            <div class="page-head" style=background:url(images/page-head-3.jpg)>
 				<div class="container">
-					<h2 class="page-title">Our Projects</h2>
-                    <small>Search here and find projects you're interested in </small>
-                    <form action="{{route('projects.index')}}"  method="get">
-                        <input type="text" class="form-control" name="s" class="form-inline" placeholder="Search Project by Name"
-                        value=" {{isset($s) ? $s : '' }} ">
-                        <button type="submit" class ="btn btn-success">Search</button>
-                 </form>
+					<h2 class="page-title">Our People</h2>
+                    {{-- <small>Search here and find projects you're interested in </small> --}}
+                  
 				</div>
 			</div>
 
+			
+			
 			<main class="main-content">
-				{{-- <div class="fullwidth-block">
+			<div class="fullwidth-block" data-bg-color="#edf2f4">
 					<div class="container">
-						<h2 class="section-title">A laboratory is a facility that provides controlled conditions</h2>
-						<p>
-                                Come join us and help grow a world class research team to support our Connectivity Lab. Work with the commercial side of the Connectivity Lab to transition...
-                                Desired Experience: Leadership Experience</p> 
+						{{-- <h2 class="section-title">Our team</h2> --}}
+						<div class="row">
 
-						<p>perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
-					</div>
-				</div> --}}
+								@if(count($people) > 0 )
+								@foreach($people as $people)
+								
+								<div class="col-md-3">
+										<div class="team">
+											<img src="/storage/file/{{$people->profile->file}}" alt="" class="team-image">
+											{{-- <img src="images/person-1.jpg" alt="" class="team-image"> --}}
+											{{-- <h3 class="team-name">{{$profile->user->name}}</h3> --}}
+										<h2><a href="/profiles/{{$people->profile->id}}">{{$people->profile->user->name}} </a></h2>
+										{{-- <h2><a href="/profile">{{$profile->user->name}} </a></h2> --}}
 
-				<div class="fullwidth-block">
-					<div class="container">
-						<div class="project-list">
-							
-							
-                            @if(count($projects) > 0)
-                            @foreach($projects as $project)
-                            {{-- <div class="project">
-								<div class="project-content">
-									<figure class="project-image"><img src="images/news_1.jpg" alt="Project"></figure> 
-                                    <h2><a href="/projects/{{$project->Project_ID}}">  {{$project->Project_Title}}</a></h2>
-								</div>
-							</div> --}}
-							
-							<div class="fullwidth-block" id="{{$project->Project_ID}}">
-									<div class="container">
-										<h2 class="section-title">{{$project->Project_Title}}</h2>
-
-										
-									<p style="Times New Roman"> {{$project->Project_details}}</p><br>
-									<div class="row">
-											<a href="{{$project->link}}}" class="btn btn-default" style="float: right;">Read document</a>
-									</div><br><br>
-									<div class="row">
-									@foreach ($project->members as $member)
-										<div class="col-md-3">
-											<div class="team">
-												<img src="/storage/file/{{$member->profile->file}}" alt="" class="team-image">
-												<h2><a href="/profiles/{{$member->profile->id}}"> {{$member->project_members}}</a> </h2>
-											</div>
-										</div>
-								@endforeach
-										{{-- <p>perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p> --}}
-									</div>
-								</div>
-
-                            @endforeach
-                            @else 
-                                    <p>No projects found!</p>
-                            @endif
-							{{ $projects->appends([ 's' => $s ])->links() }} 
-							</div>
-						</div>
-					</div>
+                                            <h1>{{ $people->profile->profession}}</h1>
+                                            
+                                        </div>
                                 </div>
                                 
+                                <div class="col-md-6">
+											<address>
+                                                    <h2>Contact Information </h2>
+                                            <p>{{$people->profile->address}}</p>
+                                            <p>Phone: {{$people->profile->phone_number}} </p>
+                                            <p>Email: {{$people->profile->user->email}} </p><br><br>
+                                            <h2>Education</h2>
+                                            <p>
+                                                @foreach ($people->profile->educations as $education)
+                                                    <ul>
+                                                        <li> {{$education->education}}  </li>
+                                                    </ul>
+                                                @endforeach
+                                            </p><br><br>
+                                            <h2>Research Interests</h2>
+                                            <p> {{$people->profile->personal_experience}} </p>
+                                        </address>
+										</div>
+									</div>
+									
+							@endforeach<br><br>
+						</ol>
+                            @else 
+							<h2>Nothing found!</h2>
+                            @endif
+                            </div>
 
 
-                               
+				
+
+				
+
 
 			</main> <!-- .main-content -->
 
@@ -169,16 +164,16 @@
 							@endguest
 								</ul>
 							</div>
-						</div>
-						<div class="col-md-3">
-								<div class="widget">
-									<h3 class="widget-title">Our address</h3>
-									<strong>Company name INC</strong>
-									<address>592 Avenue Street, Los Angeles, CA 90012</address>
-									<a href="tel:+1 800 931 812">+1 800 931 812</a> <br>
-									<a href="mailto:office@companyname.com">office@companyname.com</a>
-								</div>
-							</div>
+                        </div>
+                        <div class="col-md-3">
+                                <div class="widget">
+                                    <h3 class="widget-title">Our address</h3>
+                                    <strong>Company name INC</strong>
+                                    <address>592 Avenue Street, Los Angeles, CA 90012</address>
+                                    <a href="tel:+1 800 931 812">+1 800 931 812</a> <br>
+                                    <a href="mailto:office@companyname.com">office@companyname.com</a>
+                                </div>
+                            </div>
 						<div class="col-md-3">
 							<div class="widget">
 								<h3 class="widget-title">Research summary</h3>

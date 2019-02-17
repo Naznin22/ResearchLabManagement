@@ -30,10 +30,10 @@
 
 
 	<body>
-			<div id="home" style="background:url(images/back_1.jpg) no-repeat center center fixed">
-				<div class="landing-text" style="color:white">
+			<div id="home" style="background:url(images/sust.jpg) ;no-repeat center center fixed ; background-size: cover">
+				<div class="landing-text" style="color:black">
 					<h1>Research Lab Management</h1>
-					<h3>Learn the basic building blocks.</h3>
+					<h2>Learn the basic building blocks.</h2>
 					{{-- <a href="#Here" class="btn btn-default btn-lg">Get Started</a> --}}
 				</div>
 			</div>
@@ -42,9 +42,10 @@
 				<div class="container">
 					<div class="header-bar">
 						<a href="index.html" class="branding">
-							{{-- <img src="images/logo.png" alt="" class="logo"> --}}
+							<img src="images/sust_logo.png" alt="" class="logo" style="height:70px; width:70px">
 							<div class="logo-type">
-								<h1 class="site-title">Research Lab Management</h1>
+								{{-- <h1 class="site-title">Research Lab Management</h1> --}}
+								<h2 >Research Lab Management</h2>
 								{{-- <small class="site-description">Tagline goes here</small> --}}
 							</div>
 						</a>
@@ -52,16 +53,17 @@
 						<nav class="main-navigation">
 							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 							<ul class="menu">
-									<li class="menu-item  current-menu-item"><a href="/mainhome"><img src="images/home-icon.png" alt="Home"></a></li>
-									<li class="menu-item"><a href="about">About</a></li>
-									<li class="menu-item"><a href="services">Services</a></li>
+									<li class="menu-item  current-menu-item"><a href="/"><img src="images/home-icon.png" alt="Home"></a></li>
+									<li class="menu-item"><a href="people">People</a></li>
 									<li class="menu-item"><a href="projects">Our projects</a></li>
 									<li class="menu-item"><a href="/apply">Apply</a></li>
+									{{-- <li class="menu-item"><a href="about">About</a></li> --}}
+									<li class="menu-item"><a href="services">Services</a></li>
 									<li class="menu-item"><a href="contact">Contact</a></li>
 								</ul>
 
 								<ul>
-									 
+{{-- 									 
 								@guest
 								<li class="nav-item">
 									<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -87,7 +89,7 @@
 										</form>
 									</div>
 								</li>
-							@endguest
+							@endguest --}}
 							{{-- </li> --}}
 							</ul>
 						</nav>
@@ -111,7 +113,7 @@
 								@foreach($whychooseuses as $whychooseus)
 								
 										<li>
-											<h3> {{$whychooseus->title}}</h3>
+											<h2> {{$whychooseus->title}}</h2>
 											<p>  {{$whychooseus->description}}</p>
 										</li>
 										
@@ -231,6 +233,8 @@
 							</div>
 					<div class="container">
 						<div class="row">
+								<div class="slider">
+										<div class="owl-carousel owl-theme">
 								@if(count($projects) > 0 )
 								@foreach($projects as $project)
 								
@@ -245,6 +249,8 @@
 									{{-- Yes! my idea worked !--}}
 								</div>
 							</div>
+										</div>
+								</div>
 							@endforeach
                             @else 
                                     <p>No projects found!</p>
@@ -281,7 +287,7 @@
 					</div>
 				</div> --}}
 
-				<div class="fullwidth-block" data-bg-color="#edf2f4">
+				{{-- <div class="fullwidth-block" data-bg-color="#edf2f4">
 					<div class="container">
 						<h2 class="section-title">Latest News</h2>
 						<div class="row">
@@ -341,7 +347,7 @@
 						<p>“We hope the nanofabrication community will be excited about the release of this software</p>
 						<a href="services" class="button">See details</a>
 					</div>
-				</div>
+				</div> --}}
 
 				{{-- <div class="fullwidth-block" data-bg-color="#edf2f4">
 					<div class="container">
@@ -356,7 +362,7 @@
 				</div> --}}
 				
 
-				<div class="fullwidth-block">
+				{{-- <div class="fullwidth-block">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6">
@@ -407,34 +413,56 @@
 							</form>
 						</div>
 					</div>
-				</div>
+				</div> --}}
 
 			</main> <!-- .main-content -->
 
 			<footer class="site-footer">
 				<div class="container">
 					<div class="row">
+						
 						<div class="col-md-3">
 							<div class="widget">
-								<h3 class="widget-title">Our address</h3>
-								<strong>Company name INC</strong>
-								<address>592 Avenue Street, Los Angeles, CA 90012</address>
-								<a href="tel:+1 800 931 812">+1 800 931 812</a> <br>
-								<a href="mailto:office@companyname.com">office@companyname.com</a>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="widget">
-								<h3 class="widget-title">Press room</h3>
+								<h3 class="widget-title">Admin or User Login</h3>
 								<ul class="arrow-list">
-									<li><a href="#">Accusantium doloremque</a></li> 
-									<li><a href="#">Laudantium totam aperiam</a></li>
-									<li><a href="#">Eaque ipsa quae illo inventore</a></li> 
-									<li><a href="#">Veritatis et quasi architecto</a></li>
-									<li><a href="#">Vitae dicta sunt explicabo</a></li>
+										@guest
+								<li class="nav-item">
+									<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+								</li>
+							@else
+								<li class="nav-item dropdown">
+									<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+										{{ Auth::user()->name }} <span class="caret"></span>
+									</a>
+		
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+										<a class="dropdown-item" href="{{ route('logout') }}"
+										   onclick="event.preventDefault();
+														 document.getElementById('logout-form').submit();">
+											{{ __('Logout') }}
+										</a>
+		
+										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+											@csrf
+										</form>
+									</div>
+								</li>
+							@endguest
 								</ul>
 							</div>
 						</div>
+						<div class="col-md-3">
+								<div class="widget">
+									<h3 class="widget-title">Our address</h3>
+									<strong>Company name INC</strong>
+									<address>592 Avenue Street, Los Angeles, CA 90012</address>
+									<a href="tel:+1 800 931 812">+1 800 931 812</a> <br>
+									<a href="mailto:office@companyname.com">office@companyname.com</a>
+								</div>
+							</div>
 						<div class="col-md-3">
 							<div class="widget">
 								<h3 class="widget-title">Research summary</h3>

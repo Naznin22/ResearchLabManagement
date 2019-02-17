@@ -50,6 +50,8 @@ Route::get('/adminPanel',function(){
 Route::get('/indexTest',function(){
     return view('projects.indexTest');
 });
+
+
 // Route::get('/profile',function(){
 //     return view('profiles.profile');
 // });
@@ -172,6 +174,8 @@ Route::post('addprofile','ProjectsController_admin@storeProfiles');
  Route::resource('users','UsersController');
  Route::resource('educations','educationsController');
  Route::resource('whychooseus','whychooseusController');
+ Route::resource('people','peopleController');
+
 
 // Route::get('/editprofiles/{id}/edit/',function(){
 //     return view('editprofiles.edit');

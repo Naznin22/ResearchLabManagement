@@ -268,6 +268,7 @@
                                                 <th>id</th>
                                                 <th>name</th>
                                                 <th>description</th>
+                                                <th>link</th>
                                                 <th>Members</th>
                                                 <th>budget</th>
                                                 <th>completion</th>
@@ -284,6 +285,7 @@
                                                     <th>{{$project->Project_ID}}</th>
                                                     <th>{{$project->Project_Title}}</th>
                                                     <th>{{$project->Project_details}}</th>
+                                                    <th>{{$project->link}}</th>
                                                     <th>@foreach ($project->members as $member)
                                                     =>{{$member->project_members}}<br>
                                                         @endforeach
@@ -343,6 +345,11 @@
                                 {{Form::label('details','Details')}}
                                 {{Form::text('details','',['class' => 'form-control', 'placeholder' => 'Details'] )}}
                             </div>
+
+                            <div class = "form-group" class="col-sm-2">
+                                    {{Form::label('link','Link')}}
+                                    {{Form::text('link','',['class' => 'form-control', 'placeholder' => 'Link'] )}}
+                                </div>
                             
                             <div class = "form-group" class="col-sm-2">
                                 {{Form::label('completion','Completion')}}

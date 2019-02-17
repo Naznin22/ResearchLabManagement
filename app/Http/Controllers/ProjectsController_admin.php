@@ -53,8 +53,8 @@ class ProjectsController_admin extends Controller
             'title'=>'required',
             'details'=>'required',
             
-            'budget'=>'required',
-            'completion'=>'required'
+            // 'budget'=>'required',
+            // 'completion'=>'required'
         ]);
     
         //create selected
@@ -63,6 +63,7 @@ class ProjectsController_admin extends Controller
         $project->Project_ID = $request->input('id');
         $project->Project_Title = $request->input('title');
         $project->Project_details = $request->input('details');
+        $project->link = $request->input('link');
         $project->members->project_members = $request->input('members');
         
         $project->Budget = $request->input('budget');
@@ -195,8 +196,8 @@ class ProjectsController_admin extends Controller
             // 'id'=>'required',
             'title'=>'required',
             'details'=>'required',
-            'budget'=>'required',
-            'completion'=>'required'
+            // 'budget'=>'required',
+            // 'completion'=>'required'
         ]);
     
         //create selected
@@ -205,7 +206,7 @@ class ProjectsController_admin extends Controller
         $project->Project_Title = $request->input('title');
         $project->Project_details = $request->input('details');
         // $project->members->project_members = $request->input('members');
-        
+        $project->link = $request->input('link');
         $project->Budget = $request->input('budget');
         $project->Completion= $request->input('completion');
         $project->public= $request->input('public');

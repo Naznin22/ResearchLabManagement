@@ -138,6 +138,11 @@
                         {{Form::label('details','Details')}}
                         {{Form::text('details',$project->Project_details,['class' => 'form-control', 'placeholder' => 'Details'] )}}
                     </div>
+
+                    <div class = "form-group" class="col-sm-2">
+                            {{Form::label('link','Link')}}
+                            {{Form::text('link',$project->link,['class' => 'form-control', 'placeholder' => 'Link'] )}}
+                        </div>
                    
                     <div class = "form-group" class="col-sm-2">
                             {{Form::label('completion','Completion')}}

@@ -30,23 +30,26 @@
 			<header class="site-header" data-bg-image="">
 				<div class="container">
 					<div class="header-bar">
-						<a href="index.html" class="branding">
-							{{-- <img src="images/logo.png" alt="" class="logo"> --}}
-							<div class="logo-type">
-								<h1 class="site-title">Research Lab Management</h1>
-								{{-- <small class="site-description">Tagline goes here</small> --}}
-							</div>
-						</a>
-
-						<nav class="main-navigation">
-							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
-							<ul class="menu">
-									<li class="home menu-item"><a href="/mainhome_for_user"><img src="images/home-icon.png" alt="Home"></a></li>
-									<li class="menu-item"><a href="about">About</a></li>
-									<li class="menu-item"><a href="services">Services</a></li>
-									<li class="menu-item"><a href="indexTest">Our projects</a></li>
-									<li class="menu-item current-menu-item"><a href="contact">Contact</a></li>
-							</ul>
+							<a href="index.html" class="branding">
+									<img src="images/sust_logo.png" alt="" class="logo" style="height:70px; width:70px">
+									<div class="logo-type">
+										{{-- <h1 class="site-title">Research Lab Management</h1> --}}
+										<h2 >Research Lab Management</h2>
+										{{-- <small class="site-description">Tagline goes here</small> --}}
+									</div>
+								</a>
+		
+								<nav class="main-navigation">
+									<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+									<ul class="menu">
+											<li class="menu-item  current-menu-item"><a href="/"><img src="images/home-icon.png" alt="Home"></a></li>
+											<li class="menu-item"><a href="people">People</a></li>
+											<li class="menu-item"><a href="projects">Our projects</a></li>
+											<li class="menu-item"><a href="/apply">Apply</a></li>
+											<li class="menu-item"><a href="about">About</a></li>
+											<li class="menu-item"><a href="services">Services</a></li>
+											<li class="menu-item"><a href="contact">Contact</a></li>
+										</ul>
 						</nav>
 
 						<div class="mobile-navigation"></div>
