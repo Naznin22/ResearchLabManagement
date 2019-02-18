@@ -152,7 +152,7 @@
         <a href="/mainhome">Dashboard</a>
         <a href="indexApply">Applications</a>
         <a class="active"  href="profilesadmin">Profiles</a>
-        <a href="#about">About</a>
+        {{-- <a href="#about">About</a> --}}
       </div>
 
 

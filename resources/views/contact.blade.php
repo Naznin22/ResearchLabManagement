@@ -166,6 +166,9 @@
 										</li>
 									@endguest
 								</ul>
+								<div class="col-mid-3" >
+										<a href="/mainhome" class="btn btn-default" style="float: left;">Go to admin page</a> 
+									</div>
 							</div>
 						</div>
 						<div class="col-md-3">

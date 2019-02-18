@@ -454,15 +454,9 @@
 								</ul>	
 								
 							</div>
+
 							<div class="col-mid-3" >
-
-									{{-- @if( {{ Auth::user()->admin}} == 0 )
-									<a href="/adminPaneluser" class="btn btn-default" style="float: left;">Go to admin page</a> --}}
-								{{-- @endif --}}
-
-								{{-- {{ Auth::user()->admin}} --}}
 								<a href="/mainhome" class="btn btn-default" style="float: left;">Go to admin page</a> 
-
 							</div>
 						</div>
 
