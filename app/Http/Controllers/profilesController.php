@@ -14,7 +14,9 @@ class profilesController extends Controller
      */
     public function index()
     {
-        
+        $profiles = Profile::all();
+        return view('profilesadmin.index', compact(['profiles']));
+
     }
 
     /**
@@ -35,7 +37,48 @@ class profilesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'id' => 'required',
+            'file'=>'required|file|mimes:jpg,jpeg,png,doc,pdf,svg,gif|max:10000'
+        ]);
+    
+        //handle upload
+        if($request->hasFile('file')){
+            //get filename with extension
+            $filenameWithExt = $request->file('file')->getClientOriginalName();
+            //get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            //get just ext
+            $extension = $request->file('file')->getClientOriginalExtension();
+            //filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            //upload image
+            $path = $request->file('file')->storeAs('public/file',$fileNameToStore);
+
+
+
+        }else{
+            $fileNameToStore = 'noimage.jpg';
+        }
+
+        $profile = new Profile;
+        $profile->id = $request->input('id');
+        // $profiles->name = $request->input('name');
+        $profile->date_of_birth = $request->input('date_of_birth');
+        $profile->phone_number = $request->input('phone_number');
+        $profile->website = $request->input('website');
+        $profile->address = $request->input('address');
+        // $profile->education = $request->input('education');
+        $profile->profession = $request->input('profession');
+        $profile->personal_experience= $request->input('personal_experience');
+        
+        $profile->file = $fileNameToStore;
+        $profile->save();
+        
+       
+        
+
+        return redirect('/profilesadmin') ;
     }
 
     /**
@@ -59,7 +102,7 @@ class profilesController extends Controller
     public function edit($id)
     {
         $profile = Profile::find($id);
-        return view('editprofiles.edit',compact('profile','id'));
+        return view('profilesadmin.edit',compact('profile','id'));
     }
 
     /**
@@ -84,13 +127,13 @@ class profilesController extends Controller
          $profile->phone_number = $request->input('phone_number');
          $profile->website = $request->input('website');
          $profile->address = $request->input('address');
-         $profile->education = $request->input('education');
+         $profile->educations->education = $request->input('education');
          $profile->profession = $request->input('profession');
          $profile->personal_experience= $request->input('personal_experience');
          
          // $profile->file = $fileNameToStore;
          $profile->save();
-         return redirect('/adminPanelUser');
+         return redirect('/profilesadmin');
     }
 
     /**

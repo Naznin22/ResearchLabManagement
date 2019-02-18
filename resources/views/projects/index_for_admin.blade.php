@@ -102,8 +102,7 @@
 										
 									<p style="Times New Roman"> {{$project->Project_details}}</p><br>
 									<div class="row">
-											<a href="{{$project->link}}}" class="btn btn-default" style="float: right;">Read document</a>
-									</div><br><br>
+											<a href="/storage/file/{{$project->file}}" target="_blank">Read more</a>									</div><br><br>
 									<div class="row">
 									@foreach ($project->members as $member)
 										<div class="col-md-3">

@@ -176,7 +176,8 @@ Route::group(['middleware' => ['web','auth']],function(){
 Route::post('apply','pagesController@postContact');
 Route::post('whychoose','ProjectsController_admin@storeWhychoose');
 Route::post('destroywhychooseus/{id}/','ProjectsController_admin@destroywhychooseus');
-Route::post('addprofile','ProjectsController_admin@storeProfiles');
+// Route::post('addprofile','ProjectsController_admin@storeProfiles');
+Route::resource('profilesadmin','profilesController');
 // Route::post('editprofiles','ProjectsController_admin@editprofile');
  Route::resource('editprofiles','profilesController');
  Route::resource('users','UsersController');
@@ -195,4 +196,6 @@ Route::post('addprofile','ProjectsController_admin@storeProfiles');
 //         return view('adminPanel');
 // });
 
-
+Route::get('/download/{file}', function ($file='') {
+    return response()->file(storage_path('app/public/'.$file)); 
+});

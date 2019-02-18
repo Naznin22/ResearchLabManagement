@@ -52,11 +52,31 @@ class ProjectsController_admin extends Controller
             'id'=>'required',
             'title'=>'required',
             'details'=>'required',
-            
+            'file'=>'required|file|mimes:jpg,jpeg,png,doc,pdf,svg,gif|max:10000'
+
             // 'budget'=>'required',
             // 'completion'=>'required'
         ]);
     
+         //handle upload
+         if($request->hasFile('file')){
+            //get filename with extension
+            $filenameWithExt = $request->file('file')->getClientOriginalName();
+            //get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            //get just ext
+            $extension = $request->file('file')->getClientOriginalExtension();
+            //filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            //upload image
+            $path = $request->file('file')->storeAs('public/file',$fileNameToStore);
+
+
+
+        }else{
+            $fileNameToStore = 'noimage.jpg';
+        }
+
         //create selected
         $project = new Project;
         
@@ -69,6 +89,7 @@ class ProjectsController_admin extends Controller
         $project->Budget = $request->input('budget');
         $project->Completion= $request->input('completion');
         $project->public = $request->input('public');
+        $project->file = $fileNameToStore;
 
         $project->push();
 

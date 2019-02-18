@@ -97,7 +97,7 @@
                 </div>
             </nav>
         <!-- Left navbar-header -->
-        <div class="navbar-default sidebar" role="navigation">
+        <div class="navbar-default sidebar" class="col-md-4" role="navigation">
             <div class="sidebar-nav navbar-collapse slimscrollsidebar">
                 <ul class="nav" id="side-menu">
                     <li style="padding: 10px 0 0;">
@@ -108,13 +108,16 @@
                         <a href="indexApply" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">Applications</span></a>
                     </li>
                     <li>
-                        <a href="resource" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i><span class="hide-menu">Resources</span></a>
+                        <a href="profilesadmin" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i><span class="hide-menu">Profiles</span></a>
                     </li>
                     <li>
-                        <a href="create" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class="hide-menu">Select</span></a>
+                        {{-- <a href="resource" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i><span class="hide-menu">Resources</span></a> --}}
                     </li>
                     <li>
-                        <a href="/selecteds" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i><span class="hide-menu">Selecteds</span></a>
+                        {{-- <a href="create" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i><span class="hide-menu">Select</span></a> --}}
+                    </li>
+                    <li>
+                        {{-- <a href="/selecteds" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i><span class="hide-menu">Selecteds</span></a> --}}
                     </li>
                     {{-- <li>
                         <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i><span class="hide-menu">Error 404</span></a>
@@ -344,7 +347,7 @@
                         <a id="add"> <h3>Add Project</h3></a>
                         </div>
                         <div class = "container">
-                        {!! Form::open(['action' => 'ProjectsController_admin@store', 'method' ]) !!}
+                        {!! Form::open(['action' => 'ProjectsController_admin@store', 'method'=>'POST', 'enctype' => 'multipart/form-data' ]) !!}
                         <div class = "form-group" class="col-sm-1">
                             {{Form::label('id','Id')}}
                             {{Form::text('id','',['class' => 'form-control', 'placeholder' => 'Id'] )}}
@@ -380,6 +383,9 @@
                                 {{Form::text('public','',['class' => 'form-control', 'placeholder' => 'Public'] )}}
                             </div>
         
+                            <div class="form-group">
+                                    {{ Form:: file('file')}}
+                                    </div>
                                 {{Form::submit('Submit',['class' => 'btn'])}}
                             
                         {!! Form::close() !!}
@@ -493,133 +499,7 @@
     
 
 
-            <div class="row">
-                    <div class="col-sm-12">
-                        <div class="white-box">                        
-                            <div class = "container">
-                            <a id="add"> <h3>Add Profiles</h3></a>
-                            </div>
-                            <div class = "container">
-
-                            {!! Form::open(['url' => '/addprofile', 'enctype' => 'multipart/form-data']) !!}
-                            <div class = "form-group" class="col-sm-1">
-                                {{Form::label('id','Id')}}
-                                {{Form::text('id','',['class' => 'form-control', 'placeholder' => 'Id'] )}}
-                            </div>
             
-                            {{-- <div class = "form-group" class="col-sm-2">
-                                    {{Form::label('name','Name')}}
-                                    {{Form::text('name','',['class' => 'form-control', 'placeholder' => 'name'] )}}
-                                </div> --}}
-            
-                            <div class = "form-group" class="col-sm-2">
-                                    {{Form::label('date_of_birth','Date_of_birth')}}
-                                    {{Form::text('date_of_birth','',['class' => 'form-control', 'placeholder' => 'date_of_birth'] )}}
-                                </div>
-                                <div class = "form-group" class="col-sm-2">
-                                        {{Form::label('phone_number','Phone_number')}}
-                                        {{Form::text('phone_number','',['class' => 'form-control', 'placeholder' => 'phone_number'] )}}
-                                    </div>
-                
-                        
-                                    <div class = "form-group" class="col-sm-2">
-                                            {{Form::label('website','Website')}}
-                                            {{Form::text('website','',['class' => 'form-control', 'placeholder' => 'website'] )}}
-                                        </div>
-                    
-                                    <div class = "form-group" class="col-sm-2">
-                                            {{Form::label('address','Address')}}
-                                            {{Form::text('address','',['class' => 'form-control', 'placeholder' => 'address'] )}}
-                                        </div>
-                                        {{-- <div class = "form-group" class="col-sm-2">
-                                                {{Form::label('education','Education')}}
-                                                {{Form::text('education','',['class' => 'form-control', 'placeholder' => 'education'] )}}
-                                            </div> --}}
-                                            <div class = "form-group" class="col-sm-2">
-                                                    {{Form::label('profession','Profession')}}
-                                                    {{Form::text('profession','',['class' => 'form-control', 'placeholder' => 'profession'] )}}
-                                                </div>
-                                                <div class = "form-group" class="col-sm-2">
-                                                        {{Form::label('personal_experience','Personal_experience')}}
-                                                        {{Form::text('personal_experience','',['class' => 'form-control', 'placeholder' => 'personal_experience'] )}}
-                                                    </div>
-                                                    <div class="form-group">
-                                                            {{ Form:: file('file')}}
-                                                            </div>
-                                
-                                
-            
-                                    {{Form::submit('Submit',['class' => 'btn'])}}
-                                
-                            {!! Form::close() !!}
-    
-                            </div>
-                        </div>
-
-
-                        
-
-                        <div class="row" id="profiles">
-                                <div class="col-sm-12">
-                                    <div class="white-box">
-                                        <h3 class="box-title">Profiles</h3>
-                                        
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        
-                                                        <th>Id</th>
-                                                        <th>Name</th>
-                                                        <th>Date of birth</th>
-                                                        <th>Phone number</th>
-                                                        <th>Website</th>
-                                                        <th>Address</th>
-                                                        <th>Education</th>
-                                                        <th>Profession</th>
-                                                        <th>Personal Experience</th>
-                                                        <th>Profile Photo</th>
-                                                        
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                        @foreach($profiles as $profile)
-                                                        <tr>
-                                                                <th>{{$profile->id}}</th>
-                                                                <th>{{$profile->user->name}}</th>
-                                                                <th>{{$profile->date_of_birth}}</th>
-                                                                <th>{{$profile->phone_number}}</th>
-                                                                <th>{{$profile->website}}</th>
-                                                                <th>{{$profile->address}}</th>
-                                                                {{-- <th>{{$profile->education}}</th> --}}
-                                                                <th>@foreach ($profile->educations as $education)
-                                                                    {{$education->education}}<br><br>
-                                                                @endforeach
-                                                            </th>
-                                                                
-
-                                                                <th>{{$profile->profession}}</th>
-                                                                <th>{{$profile->personal_experience}}</th>
-                                                                <th><embed width="200px" height="250px" src="/storage/file/{{$profile->file}}"> </th>
-                                                                <th> <a href="/editprofiles/{{$profile->id}}/edit/" class="btn btn-success">Edit</a> </th>
-                                                            
-                                                                <th>
-                                                                        {!! Form::open(['action' => ['profilesController@destroy',$profile->id] , 'method'=>'POST', 'class'=> 'pull-right' ]) !!}
-                                                                            {{Form::hidden('_method', 'DELETE')}}
-                                                                        {{Form::submit('Delete',['class' => 'btn btn-danger'])}}
-                                                
-                                                                        {!! Form::close() !!}
-                                                                </th>
-                                                        </tr>
-                                                        @endforeach
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
 
 
                         <div class="row">
